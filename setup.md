@@ -1,6 +1,6 @@
-# Arch Linux
-
-## Download `Arch Linux` with `Dualboot`
+# `Arch Linux`
+****
+## `Download Arch Linux with Dualboot`
 1. Download [Torrent file](https://archlinux.org/releng/releases/)
 2. Install .iso with Rufus(With `GPT`):
 
@@ -200,9 +200,7 @@ reboot
 
 ****
 ## `Install Nvidia`
-```sh
-lspci -k | grep -A 2 -E "( VGA | 3D )" # Find VGA name
-```
+- coming soon
 ****
 ## `Delete Arch Linux`
 1. Delete the Arch partitions in Windows Disk Management
