@@ -200,7 +200,10 @@ reboot
 
 ****
 ## `Install Nvidia`
-- coming soon
+`Warning: I don't test this command`
+```sh
+sudo pacman -S nvidia nvidia-utils 
+```
 ****
 ## `Delete Arch Linux`
 1. Delete the Arch partitions in Windows Disk Management
