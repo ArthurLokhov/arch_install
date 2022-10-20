@@ -1,14 +1,5 @@
 # `Arch Linux`
-****
-## `Download Arch Linux with Dualboot`
-1. Download [Torrent file](https://archlinux.org/releng/releases/)
-2. Install .iso with Rufus(With `GPT`):
 
-<img src="./assets/rufus.png" alt="rufus install" />
-
-3. Reboot `Windows` and open `Boot Menu`.
-
-****
 ## `Configure Arch Linux`
 
 ### Configure `Wi-Fi`:
@@ -32,12 +23,6 @@ ping archlinux.org -c 5
 
 ### Base Configure
 
-Change Terminal Font:
-```sh
-clear
-setfont ter-132n
-```
-
 Verify EFI Boot:
 ```sh
 ls /sys/firmware/efi/efivars/
@@ -50,12 +35,6 @@ timedatectl list-timezones
 timedatectl set-timezone <timezone>
 timedatectl status
 clear
-```
-
-Load Keyboard Layout:
-```sh
-ls /usr/share/kbd/keymaps/i386/qwerty/ # print the list of keyboard layouts
-loadkeys /usr/share/kbd/keymaps/i386/qwerty/[ru/us].map.gz # load the keyboard layout 
 ```
 
 ### Creating a Partitions
