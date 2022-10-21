@@ -201,13 +201,13 @@ sudo vim /etc/hosts -> # (3)
     127.0.0.1   artlkv.localdomain localhost
 systemctl enable dhcpcd.service
 systemctl enable NetworkManager.service
-nmcli device wifi connect "TP-Link" password 12345678 name "TP-Link Wifi" # (4)
+nmcli device wifi connect <SSID> password <password> # (4)
 ```
 
 1. Gives you the network interface name and the driver name.
 2. Verify which network device is plugged.
 3. Set hostname.
-4. If you need connect to Wi-Fi with name `TP-Link` and password `12345678`.
+4. If you need connect to Wi-Fi with name `<SSID>` and password `<password>`.
 
 ## Next...
 Chapter 3: [`Install Grub boot loader`](./grub_boot_loader.md).
