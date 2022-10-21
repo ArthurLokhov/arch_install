@@ -1,13 +1,13 @@
 # Base Arch installation
 
-## Change Terminal Font:
+## Change terminal font:
 *****
 ```sh
 setfont ter-132n # (1)
 ```
 1. Set font with naming `ter-132n` 
 
-## Change Keyboard Layout
+## Change keyboard layout
 *****
 ```sh
 ls /usr/share/kbd/keymaps/i386/qwerty/ # (1)
@@ -46,7 +46,7 @@ ping archlinux.org -c 5  # (4)
 3. Connect to the Wi-Fi
 4. Check the connection to Ethernet
 
-## Update Time and Date:
+## Update time and date:
 *****
 ```sh
 timedatectl status  # (1)
@@ -60,7 +60,7 @@ clear
 2. Use to get list of timezones
 3. Use to setup the choose timezone
 
-## Creating a Partitions
+## Creating a partitions
 *****
 
 `WARNING`: `SDA` is my main disk, if you select other one, that disk's name will be different of `SDA`
@@ -93,11 +93,15 @@ mkfs.ext4 /dev/sda6 # (1) for home
 clear
 mkswap /dev/sda7 # (2) for swap
 swapon /dev/sda7 # (3) for the 'swap' partition
-mount /dev/sda5 /mnt # (3) for the 'root' partition
-mkdir /mnt/home # (4) create 'home' holder
-mount /dev/sda6 /mnt/home # (3) for the 'home' partition
+mount /dev/sda5 /mnt # (4) for the 'root' partition
+mkdir /mnt/home # (5) create 'home' holder
+mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 ```
 1. Formatting the partition with correct format.
+2. Formatting the partition with `swap` format.
+3. Mount the `swap` partition
+4. Mount the partition with your correct folder.
+5. Create the folder for `home` partition.
 
 ## Coming Soon....
 *****
