@@ -94,7 +94,7 @@ clear
 mkswap /dev/sda7 # (2) for swap
 swapon /dev/sda7 # (3) for the 'swap' partition
 mount /dev/sda5 /mnt # (4) for the 'root' partition
-mkdir /mnt/home # (5) create 'home' holder
+mkdir /mnt/home # (5)
 mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 ```
 1. Formatting the partition with correct format.
