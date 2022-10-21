@@ -140,5 +140,46 @@ genfstab -U /mnt >> /mnt/etc/fstab # Generate File System Table
 arch-chroot /mnt
 ```
 
+## Generate locales
+*****
+```sh
+vim /etc/locale.gen ->
+    en_US.UTF-8 # (1)
+    ru_RU.UTF-8 # (2)
+locale-gen
+```
+1. Uncomment this line
+
+## Configure locales
+```sh
+vim /etc/locale.conf ->
+    LANG=en_US.UTF-8 # (1)
+    LC_ADDRESS=ru_RU.UTF-8
+    LC_COLLATE=C
+    LC_CTYPE=ru_RU.UTF-8
+    LC_IDENTIFICATION=ru_RU.UTF-8
+    LC_MONETARY=ru_RU.UTF-8
+    LC_MESSAGES=en_US.UTF-8 # (1)
+    LC_MEASUREMENT=ru_RU.UTF-8
+    LC_NAME=ru_RU.UTF-8
+    LC_NUMERIC=ru_RU.UTF-8
+    LC_PAPER=ru_RU.UTF-8
+    LC_TELEPHONE=ru_RU.UTF-8
+    LC_TIME=ru_RU.UTF-8
+```
+1. For UI I use the english letters, but for another I use russian letters.
+
+## Configure keyboard layout
+*****
+```sh
+sudo echo "KEYMAP=ru" >> /etc/vconsole.conf 
+```
+
+## Set the timezone
+*****
+```sh
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+```
+
 ## Coming Soon....
 *****
