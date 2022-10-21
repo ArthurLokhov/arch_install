@@ -210,4 +210,4 @@ nmcli device wifi connect "TP-Link" password 12345678 name "TP-Link Wifi" # (4)
 4. If you need connect to Wi-Fi with name `TP-Link` and password `12345678`
 
 ## Next...
-Chapter 3: `Install Grub Boot Loader`
+Chapter 3: `Install Grub boot loader`
