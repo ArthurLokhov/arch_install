@@ -109,7 +109,7 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 
 ## Install essential packages
 ```sh
-pacstrap /mnt base base-devel linux linux-filmware linux-headers \ # (1)
+pacstrap /mnt base base-devel linux linux-filmware \ # (1)
     sudo nano vim git neofetch which zsh\ # (2)
     dosfstools efibootmgr mtools grub \  # (3)
     dhcpd networkmanager intel-ucode # (4)
