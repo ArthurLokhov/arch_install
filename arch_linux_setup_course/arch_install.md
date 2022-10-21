@@ -111,12 +111,14 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 ```sh
 pacstrap /mnt base base-devel linux linux-filmware linux-headers \ # (1)
     sudo nano vim git neofetch which zsh\ # (2)
-    dosfstools efibootmgr mtools grub # (3)
+    dosfstools efibootmgr mtools grub \  # (3)
+    dhcpd networkmanager intel-ucode # (4)
 ls /mnt 
 ```
 1. We are installing the main dependencies
 2. Must-Have utilities
 3. Utilities, which needed for install and setup boot loader.
+4. Drivers
 
 ## Generate the FileSystemTable
 ```sh
@@ -159,7 +161,7 @@ vim /etc/locale.conf ->
 Or automotive this process
 ```sh
 cd /etc/
-sudo curl -L "" -O
+sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/locale.conf" -O
 ```
 
 ## Configure keyboard layout
@@ -172,4 +174,40 @@ sudo echo "KEYMAP=ru" >> /etc/vconsole.conf
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 ```
 
-## Coming Soon....
+## Set a root password
+```sh
+passwd
+```
+
+## Create a non-root user
+```sh
+useadd -m -g users -G wheel,storage,power -s /bin/zsh <user_name> # (1)
+passwf <user_name>
+EDITOR=vim visudo ->
+    %wheel ALL=(ALL) ALL # (2)
+```
+1. Create a non-root user with zsh terminal, with permissions of wheel, storage and power. `<user_name>` is your username.
+2. Uncomment this line.
+
+## Network configuration
+```sh
+sudo pacman -S lshw
+sudo lshw -C network # (1)
+cat /sys/class/net/<network_device>/carrier # (2)
+echo 'artlkv' > etc/hostname
+sudo vim /etc/hosts -> # (3)
+    127.0.0.1   localhost
+    ::1         localhost   
+    127.0.0.1   artlkv.localdomain localhost
+systemctl enable dhcpcd.service
+systemctl enable NetworkManager.service
+nmcli device wifi connect "TP-Link" password 12345678 name "TP-Link Wifi" # (4)
+```
+
+1. Gives you the network interface name and the driver name.
+2. Verify which network device is plugged.
+3. Set hostname
+4. If you need connect to Wi-Fi with name `TP-Link` and password `12345678`
+
+## Next...
+Chapter 3: `Install Grub Boot Loader`

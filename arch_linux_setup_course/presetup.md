@@ -15,3 +15,6 @@
 <img src="../assets/rufus.png" alt="rufus install" />
 
 3. Reboot `Windows` and open `Boot Menu`.
+
+## Next...
+Chapter 2: `Base Arch installation`
