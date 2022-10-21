@@ -1,14 +1,12 @@
 # Base Arch installation
 
 ## Change terminal font:
-*****
 ```sh
 setfont ter-132n # (1)
 ```
 1. Set font with naming `ter-132n` 
 
 ## Change keyboard layout
-*****
 ```sh
 ls /usr/share/kbd/keymaps/i386/qwerty/ # (1)
 loadkeys /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz # (2) 
@@ -17,18 +15,15 @@ loadkeys /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz # (2)
 2. Load the keyboard layout. I choose `QWERTY` with russian letters support.
 
 ## Set font with russian support
-*****
 `Coming Soon...`
 
 ## Verify the boot mode
-*****
 ```sh
 ls /sys/firmware/efi/efivars # (1)
 ```
 1. If the command shows the directory without error, then the system is booted in `UEFI` mode. 
 
 ## Connect to the Wi-Fi
-*****
 ```sh
 ip link # (1)
 iwctl # (2)
@@ -47,7 +42,6 @@ ping archlinux.org -c 5  # (4)
 4. Check the connection to Ethernet
 
 ## Update time and date:
-*****
 ```sh
 timedatectl status  # (1)
 timedatectl list-timezones # (2)
@@ -61,7 +55,6 @@ clear
 3. Use to setup the choose timezone
 
 ## Creating a partitions
-*****
 
 `WARNING`: `SDA` is my main disk, if you select other one, that disk's name will be different of `SDA`
 
@@ -86,7 +79,6 @@ cfdisk /dev/sda #
 Create a partitions, after write a partitions and exit from cfdisk
 
 ## Formating a partitions
-*****
 ```sh
 mkfs.ext4 /dev/sda5 # (1) for root
 mkfs.ext4 /dev/sda6 # (1) for home
@@ -104,7 +96,6 @@ mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 5. Create the folder for `home` partition.
 
 ## Setting up fastest mirrors
-*****
 ```sh
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak # (1)
 pacman -Sy # (2) 
@@ -117,7 +108,6 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 4. This command select the first 10 fastest mirrors and rewrite mirrorlist with them
 
 ## Install essential packages
-*****
 ```sh
 pacstrap /mnt base base-devel linux linux-filmware linux-headers \ # (1)
     sudo nano vim git neofetch which zsh\ # (2)
@@ -129,19 +119,16 @@ ls /mnt
 3. Utilities, which needed for install and setup boot loader.
 
 ## Generate the FileSystemTable
-*****
 ```sh
 genfstab -U /mnt >> /mnt/etc/fstab # Generate File System Table
 ```
 
 ## Enter the newly installed Arch
-*****
 ```sh
 arch-chroot /mnt
 ```
 
 ## Generate locales
-*****
 ```sh
 vim /etc/locale.gen ->
     en_US.UTF-8 # (1)
@@ -169,17 +156,20 @@ vim /etc/locale.conf ->
 ```
 1. For UI I use the english letters, but for another I use russian letters.
 
+Or automotive this process
+```sh
+cd /etc/
+sudo curl -L "" -O
+```
+
 ## Configure keyboard layout
-*****
 ```sh
 sudo echo "KEYMAP=ru" >> /etc/vconsole.conf 
 ```
 
 ## Set the timezone
-*****
 ```sh
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 ```
 
 ## Coming Soon....
-*****
