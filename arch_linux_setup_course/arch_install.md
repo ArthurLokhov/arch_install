@@ -4,14 +4,14 @@
 ```sh
 setfont ter-132n # (1)
 ```
-1. Set font with naming `ter-132n` 
+1. Set font with naming `ter-132n`.
 
 ## Change keyboard layout
 ```sh
 ls /usr/share/kbd/keymaps/i386/qwerty/ # (1)
 loadkeys /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz # (2) 
 ```
-1. Print the list of keyboard layouts
+1. Print the list of keyboard layouts.
 2. Load the keyboard layout. I choose `QWERTY` with russian letters support.
 
 ## Set font with russian support
@@ -36,10 +36,10 @@ iwctl --passphrase `password` station `wlan` connect  `SSID`  # (3)
 ping archlinux.org -c 5  # (4)
 ```
 
-1. Ensure your network interface is listed and enabled
+1. Ensure your network interface is listed and enabled.
 2. Wi-Fi—authenticate to the wireless network using iwctl.
-3. Connect to the Wi-Fi
-4. Check the connection to Ethernet
+3. Connect to the Wi-Fi.
+4. Check the connection to Ethernet.
 
 ## Update time and date:
 ```sh
@@ -50,13 +50,13 @@ timedatectl status
 clear
 ```
 
-1. Use to ensure the system clock is accurate
-2. Use to get list of timezones
-3. Use to setup the choose timezone
+1. Use to ensure the system clock is accurate.
+2. Use to get list of timezones.
+3. Use to setup the choose timezone.
 
 ## Creating a partitions
 
-`WARNING`: `SDA` is my main disk, if you select other one, that disk's name will be different of `SDA`
+`WARNING`: `SDA` is my main disk, if you select other one, that disk's name will be different of `SDA`.
 
 Disk Info:
 ```sh
@@ -66,9 +66,9 @@ fdisk -l # (3)
 cfdisk /dev/sda #   
 ```
 
-1. Print the list of disks and partitions
-2. Check the disk name in field 'Model'
-3. More information then the first command
+1. Print the list of disks and partitions.
+2. Check the disk name in field 'Model'.
+3. More information then the first command.
 4. Choose the disk, which you will be creating a partitions. I am use `cfdisk`, but you can use the `fdisk`.
 
 ### Main partitions:
@@ -76,7 +76,7 @@ cfdisk /dev/sda #
 2. home(`10+Gb`)(`140Gb` - my choose)
 3. swap(`4+Gb`)(`10Gb` - my choose)
 
-Create a partitions, after write a partitions and exit from cfdisk
+Create a partitions, after write a partitions and exit from cfdisk.
 
 ## Formating a partitions
 ```sh
@@ -91,7 +91,7 @@ mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 ```
 1. Formatting the partition with correct format.
 2. Formatting the partition with `swap` format.
-3. Mount the `swap` partition
+3. Mount the `swap` partition.
 4. Mount the partition with your correct folder.
 5. Create the folder for `home` partition.
 
@@ -102,10 +102,10 @@ pacman -Sy # (2)
 pacman -S pacman-contrib # (3)
 rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 ```
-1. Create the mirrorlist backup
-2. Update package list
-3. Download contribute scripts to pacman
-4. This command select the first 10 fastest mirrors and rewrite mirrorlist with them
+1. Create the mirrorlist backup.
+2. Update package list.
+3. Download contribute scripts to pacman.
+4. This command select the first 10 fastest mirrors and rewrite mirrorlist with them.
 
 ## Install essential packages
 ```sh
@@ -115,10 +115,10 @@ pacstrap /mnt base base-devel linux linux-filmware linux-headers \ # (1)
     dhcpd networkmanager intel-ucode # (4)
 ls /mnt 
 ```
-1. We are installing the main dependencies
-2. Must-Have utilities
+1. We are installing the main dependencies.
+2. Must-Have utilities.
 3. Utilities, which needed for install and setup boot loader.
-4. Drivers
+4. Drivers. Replace `intel-ucode` to `amd-ucode` if your CPU is `AMD`. 
 
 ## Generate the FileSystemTable
 ```sh
@@ -137,7 +137,7 @@ vim /etc/locale.gen ->
     ru_RU.UTF-8 # (2)
 locale-gen
 ```
-1. Uncomment this line
+1. Uncomment this line.
 
 ## Configure locales
 ```sh
@@ -158,7 +158,7 @@ vim /etc/locale.conf ->
 ```
 1. For UI I use the english letters, but for another I use russian letters.
 
-Or automotive this process
+Or automotive this process:
 ```sh
 cd /etc/
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/locale.conf" -O
@@ -206,8 +206,8 @@ nmcli device wifi connect "TP-Link" password 12345678 name "TP-Link Wifi" # (4)
 
 1. Gives you the network interface name and the driver name.
 2. Verify which network device is plugged.
-3. Set hostname
-4. If you need connect to Wi-Fi with name `TP-Link` and password `12345678`
+3. Set hostname.
+4. If you need connect to Wi-Fi with name `TP-Link` and password `12345678`.
 
 ## Next...
-Chapter 3: `Install Grub boot loader`
+Chapter 3: [`Install Grub boot loader`](./grub_boot_loader.md).
