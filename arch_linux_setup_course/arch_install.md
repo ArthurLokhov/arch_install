@@ -103,5 +103,42 @@ mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 4. Mount the partition with your correct folder.
 5. Create the folder for `home` partition.
 
+## Setting up fastest mirrors
+*****
+```sh
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak # (1)
+pacman -Sy # (2) 
+pacman -S pacman-contrib # (3)
+rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
+```
+1. Create the mirrorlist backup
+2. Update package list
+3. Download contribute scripts to pacman
+4. This command select the first 10 fastest mirrors and rewrite mirrorlist with them
+
+## Install essential packages
+*****
+```sh
+pacstrap /mnt base base-devel linux linux-filmware linux-headers \ # (1)
+    sudo nano vim git neofetch which zsh\ # (2)
+    dosfstools efibootmgr mtools grub # (3)
+ls /mnt 
+```
+1. We are installing the main dependencies
+2. Must-Have utilities
+3. Utilities, which needed for install and setup boot loader.
+
+## Generate the FileSystemTable
+*****
+```sh
+genfstab -U /mnt >> /mnt/etc/fstab # Generate File System Table
+```
+
+## Enter the newly installed Arch
+*****
+```sh
+arch-chroot /mnt
+```
+
 ## Coming Soon....
 *****
