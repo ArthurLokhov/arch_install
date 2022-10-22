@@ -56,17 +56,3 @@ Browse the catalog and install :
 1. Launch Tweaks app.
 2. Fonts > Antialiasing > Subpixel.
 3. Download and setup the wallpaper.
-
-## Install Windows fonts
-```sh
-sudo mkdir /mnt/win1011
-sudo ntfs-3g <your_windows_partition> /mnt/win1011
-mkdir -p ~/Downloads/source_windows_fonts
-cp /mnt/win1011/Windows/Fonts/*.tt* ~/Downloads/source_fonts_11
-cp /mnt/win1011/Windows/System32/Licenses/neutral/_Default/Core/license.rtf ~/Downloads/source_fonts_11
-
-cd ~/Downloads/source_windows_fonts
-curl -L 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=ttf-ms-win11' -o PKGBUILD
-makepkg
-sudo paru -U ttf-ms-win11-TAB-FOR-COMPLETION.pkg.tar.zst
-```
