@@ -150,4 +150,5 @@ cd /etc/pacman.d/hooks
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/nvidia.hook" -O
 ```
 
-## Coming soon...
+## Next...
+Chapter 5: [`Desktop environment(Gnome or Qtile)`](./desktop_environments/desktop_environments.md).
