@@ -2,7 +2,7 @@
 
 ## Install Gnome and graphical apps packages
 ```sh
-paru -S baobab eog evince file-roller gdm gedit gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-logs gnome-screenshot flameshot gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor gvfs gvfs-google gvfs-smb mutter nautilus sushi dconf-editor
+paru -S baobab eog evince file-roller gdm gedit gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-logs gnome-screenshot flameshot gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor gnome-tweaks gnome-menus gvfs gvfs-google gvfs-smb mutter nautilus sushi dconf-editor google-chrome
 ```
 
 ## Gdm configuration
@@ -31,4 +31,42 @@ vim ~/.xprofile ->
 ## Reboot
 ```sh
 sudo reboot
+```
+
+## Install GNOME extensions
+```sh
+paru -S gnome-browser-connector
+```
+
+Go to [`Gnome extensions`](https://extensions.gnome.org/) and install the Chrome extension.
+Browse the catalog and install :
+- ArcMenu
+- Dash to Panel
+- No overview at start-up
+- Tray Icons: Reloaded
+
+## Configure GNOME extensions
+1. ArcMenu
+- Display ArcMenu on : Dash to Panel
+
+2. Dash to Panel
+- Panel screen position: On top
+
+## Configure font antialiasing and other
+1. Launch Tweaks app.
+2. Fonts > Antialiasing > Subpixel.
+3. Download and setup the wallpaper.
+
+## Install Windows fonts
+```sh
+sudo mkdir /mnt/win1011
+sudo ntfs-3g <your_windows_partition> /mnt/win1011
+mkdir -p ~/Downloads/source_windows_fonts
+cp /mnt/win1011/Windows/Fonts/*.tt* ~/Downloads/source_fonts_11
+cp /mnt/win1011/Windows/System32/Licenses/neutral/_Default/Core/license.rtf ~/Downloads/source_fonts_11
+
+cd ~/Downloads/source_windows_fonts
+curl -L 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=ttf-ms-win11' -o PKGBUILD
+makepkg
+sudo paru -U ttf-ms-win11-TAB-FOR-COMPLETION.pkg.tar.zst
 ```
