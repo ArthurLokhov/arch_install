@@ -12,9 +12,9 @@ mount /dev/sda1 /boot/efi/ # (2)
 ```sh
 sudo vim /etc/default/grub ->
     GRUB_DISABLE_OS_PROBER=false # (1)
-pacman -S os-prober
-grub-install --target=x86_640-efi --bootloader-id=grub_uefi --recheck # (2)
-grub-mkconfig -o /boot/grub/grub.cfg # (3)
+pacman -S os-prober ntfs-3g
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --boot-directory=/boot/efi/EFI --bootloader-id=grub_uefi --recheck # (2)
+grub-mkconfig -o /boot/efi/EFI/grub/grub.cfg # (3)
 ```
 1. Uncomment this line.
 2. Install the grub loader for `x86_64` arch with id `grub_uefi`.
@@ -24,7 +24,7 @@ If Windows boot manager don't found, you should repeat grub-mkconfig after reboo
 
 ## Enable system services
 ```sh
-systemctl enable dhpcpcd.service
+systemctl enable dhcpcd.service
 systemctl enable NetworkManager.service
 ```
 
@@ -37,7 +37,8 @@ reboot
 
 ## Windows Boot Manager(After reboot)
 ```sh
-grub-mkconfig -o /boot/grub/grub.cfg
+mount /dev/sda1 /boot/efi/
+grub-mkconfig -o /boot/efi/EFI/grub/grub.cfg
 reboot
 ```
 
