@@ -112,7 +112,7 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 pacstrap /mnt base base-devel linux linux-filmware \ # (1)
     sudo nano vim git neofetch which zsh\ # (2)
     dosfstools efibootmgr mtools grub \  # (3)
-    dhcpd networkmanager intel-ucode # (4)
+    dhcpcd networkmanager intel-ucode # (4)
 ls /mnt 
 ```
 1. We are installing the main dependencies.
@@ -182,7 +182,7 @@ passwd
 ## Create a non-root user
 ```sh
 useadd -m -g users -G wheel,storage,power -s /bin/zsh <user_name> # (1)
-passwf <user_name>
+passwd <user_name>
 EDITOR=vim visudo ->
     %wheel ALL=(ALL) ALL # (2)
 ```
