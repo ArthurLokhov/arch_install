@@ -79,36 +79,6 @@ vim ~/.zshrc ->
 
 1. Ensures `fd` doesn’t filter hidden directories or files.
 
-## Nvidia drivers
-```sh
-sudo pacman -S linux-headers
-sudo pacman -S nvidia libglvnd nvidia-utils opencl-nvidia nvidia-settings
-sudo vim /etc/mkinitcpio.conf ->
-    MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
-mkinitcpio
-sudo vim /etc/pacman.d/hooks/nvidia.hook ->
-    [Trigger]
-    Operation=Install
-    Operation=Upgrade
-    Operation=Remove
-    Type=Package
-    Target=nvidia
-    Target=nvidia-lts
-
-    [Action]
-    Depends=mkinitcpio
-    When=PostTransaction
-    Exec=/usr/bin/mkinitcpio -P
-sudo reboot
-nvidia-smi # (3)
-sudo systemctl enable nvidia-persistenced.service # (4)
-```
-
-1. Edit the modules line.
-2. Add to options line.
-3. Launch to test if all cards are detected.
-4. Enabling persistence daemon for `CUDA`.
-
 ## Configure git
 ```sh
 git config --global user.email "<email>" # (1)
