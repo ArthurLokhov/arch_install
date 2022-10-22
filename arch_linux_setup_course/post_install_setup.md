@@ -50,6 +50,7 @@ pacman -S bat exa fd
 
 ## Configure Bat
 ```sh
+mkdir ~/Downloads
 cd ~/Downloads
 git clone git@github.com:catppuccin/bat.git
 cd bat
@@ -78,21 +79,13 @@ vim ~/.zshrc ->
 
 1. Ensures `fd` doesn’t filter hidden directories or files.
 
-## Fix data/ ownership
-```sh
-sudo chown artlkv /data # (1)
-```
-
-1. Replate `artlkv` to your username.
-
 ## Nvidia drivers
 ```sh
 sudo pacman -S linux-headers
 sudo pacman -S nvidia libglvnd nvidia-utils opencl-nvidia nvidia-settings
 sudo vim /etc/mkinitcpio.conf ->
     MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
-sudo vim /boot/loader/entries/arch.conf -> 
-    nvidia-drm.modeset=1 # (2)
+mkinitcpio
 sudo vim /etc/pacman.d/hooks/nvidia.hook ->
     [Trigger]
     Operation=Install
