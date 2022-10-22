@@ -108,10 +108,8 @@ sudo vim /etc/pacman.conf ->
 ## Automation install configs
 ```sh
 cd ~
-sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.zshenv" -O
-sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.zshrc" -O
-cd /etc/pacman.d/hooks
-sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/nvidia.hook" -O
+sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/zsh/.zshenv" -O
+sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/zsh/.zshrc" -O
 ```
 
 ## Next...

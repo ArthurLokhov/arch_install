@@ -8,7 +8,7 @@ sudo vim /etc/mkinitcpio.conf ->
     MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
 mkinitcpio
 cd /etc/pacman.d/hooks
-sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/nvidia.hook" -O # (2)
+sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/nvidia/nvidia.hook" -O # (2)
 sudo reboot
 nvidia-smi # (3)
 sudo systemctl enable nvidia-persistenced.service # (4)

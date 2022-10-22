@@ -2,7 +2,7 @@
 
 ## X.org install
 ```sh
-paru -S xorg-server xorg-init xterm
+paru -S xorg-server xorg-xinit xterm
 ```
 
 ## Window Managers
