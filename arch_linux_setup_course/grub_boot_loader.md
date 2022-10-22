@@ -17,7 +17,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --boot-directory=/boo
 grub-mkconfig -o /boot/efi/EFI/grub/grub.cfg # (3)
 ```
 1. Uncomment this line.
-2. Install the grub loader for `x86_64` arch with id `grub_uefi`.
+2. Install the grub loader for `x86_64` arch with id `grub_uefi`. You should recheck this command, it's may different to you.
 3. Make the Grub loader config `grub.cfg`.
 
 If Windows boot manager don't found, you should repeat grub-mkconfig after reboot.

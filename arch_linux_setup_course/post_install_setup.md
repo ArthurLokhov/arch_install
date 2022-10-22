@@ -128,6 +128,7 @@ less PKGBUILD # (1)
 makepkg -si
 sudo vim /etc/paru.conf ->
     # (2)
+sudo vim /etc/pacman.conf ->
     # (3)
 ```
 1. Check that everything is OK.
