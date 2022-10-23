@@ -28,3 +28,13 @@ paru -S ttf-dejavu noto-fonts
 paru -S nerd-fonts-jetbrains-mono
 paru -S nerd-fonts-fira-code
 ```
+
+## Install kitty
+```sh
+paru -S kitty
+paru -R xterm # (1)
+mkdir -p ~/.config/kitty
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/kitty.conf' > ~/.config/kitty/kitty.conf
+```
+
+1. Unless you use raw X.org, you probably won’t need this. :)
