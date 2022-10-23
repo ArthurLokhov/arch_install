@@ -1,4 +1,4 @@
-# Desktop environment(Gnome or Qtile)
+# Desktop environment
 
 ## X.org install
 ```sh
@@ -7,7 +7,6 @@ paru -S xorg-server xorg-xinit xterm
 
 ## Window Managers
 1. [`Gnome desktop environment`](./gnome_desktop_env.md).
-2. [`Qtile desktop environment`](./qtile_desktop_env.md).
 
 ## Install Windows fonts
 ```sh
