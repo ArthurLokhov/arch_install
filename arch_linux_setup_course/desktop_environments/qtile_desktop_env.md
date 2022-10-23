@@ -13,14 +13,16 @@ sudo systemctl enable gdm.service
 ```sh
 paru -S qtile qtile-extras-git rofi python-dbus-next network-manager-applet pasystray blueman bottom picom-git google-chrome # (1)
 paru -S baobab eog evince file-roller gnome-calculator gnome-characters gnome-disk-utility gnome-font-viewer gnome-logs flameshot gnome-settings-daemon nautilus # (2)
+
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/qtile/' > ~/.config/qtile/ # (3)
 ```
 
 1. Install the qtile and main softwares.
 2. Install useful Gnome softwares.
+3. Install my Qtile configuration.
 
 ## Configure picom
 ```sh
-
 curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/picom/picom.conf' > ~/.config/picom/picom.conf # (1)
 ```
 
@@ -92,6 +94,18 @@ vim ~/.config/gtk-3.0/settings.ini ->
     gtk-icon-theme-name=Papirus
     gtk-cursor-theme-name = Catppuccin-Macchiato-Dark
 ```
+
+## Config rofi
+```sh
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/rofi/config.rasi' > ~/.config/rofi/config.rasi # (1)
+```
+1. Install my config.rasi.
+
+## Config flameshot
+```sh
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/flameshot/flameshot.ini' > ~/.config/flameshot/flameshot.ini # (1)
+```
+1. Install my flameshot.ini.
 
 ## Configure other apps
 ```sh
