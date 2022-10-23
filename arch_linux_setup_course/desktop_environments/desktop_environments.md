@@ -34,7 +34,18 @@ paru -S nerd-fonts-fira-code
 paru -S kitty
 paru -R xterm # (1)
 mkdir -p ~/.config/kitty
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/kitty.conf' > ~/.config/kitty/kitty.conf
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/kitty.conf' > ~/.config/kitty/kitty.conf # (2)
 ```
 
 1. Unless you use raw X.org, you probably won’t need this. :)
+2. Install my kitty.conf.
+
+## Configure ZSH
+```sh
+paru -S zsh-theme-powerlevel10k
+vim ~/.zshrc # (1)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.p10k.zsh' > ~/.p10k.zsh # (2)
+```
+
+1. Add `source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme`.
+2. Install my .p10k.zsh.
