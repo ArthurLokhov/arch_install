@@ -49,3 +49,20 @@ curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/conf
 
 1. Add `source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme`.
 2. Install my .p10k.zsh.
+
+## Bluetooth
+```sh
+paru -S bluez bluez-utils pipewire pipewire-pulse # (1)
+mkdir -p ~/.config/pipewire/media-session.d/
+cp /usr/share/pipewire/*.conf ~/.config/pipewire/ # (2)
+vim ~/.config/pipewire/pipewire.conf # (3)
+
+systemctl --user enable pipewire.service
+systemctl --user enable pipewire-pulse.service
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+```
+
+1. Install libraries for bluetooth working.
+2. Copy the configs.
+3. Uncomment and modify the line `default.clock.allowed-rates = [ 44100 48000 ]`
