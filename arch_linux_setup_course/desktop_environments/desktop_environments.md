@@ -34,7 +34,7 @@ paru -S nerd-fonts-fira-code
 paru -S kitty
 paru -R xterm # (1)
 mkdir -p ~/.config/kitty
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/kitty.conf' > ~/.config/kitty/kitty.conf # (2)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/kitty/kitty.conf' > ~/.config/kitty/kitty.conf # (2)
 ```
 
 1. Unless you use raw X.org, you probably won’t need this. :)
@@ -49,6 +49,13 @@ curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/conf
 
 1. Add `source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme`.
 2. Install my .p10k.zsh.
+
+## Configure neofetch
+```sh
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/neofetch.conf' > ~/.config/neofetch/neofetch.conf # (1)
+```
+
+1. Install my neofetch.conf.
 
 ## Bluetooth
 ```sh
