@@ -95,6 +95,14 @@ mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 4. Mount the partition with your correct folder.
 5. Create the folder for `home` partition.
 
+## Create the EFI partition
+```sh
+mkdir /mnt/efi # (1)
+mount /dev/sda1 /mnt/efi/ # (2)
+```
+1. Create the `EFI` partition.
+2. Mount the `EFI` partition to `windows boot manager` partition. For me it's `sda1`.
+
 ## Setting up fastest mirrors
 ```sh
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak # (1)
@@ -110,15 +118,13 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 ## Install essential packages
 ```sh
 pacstrap /mnt base base-devel linux linux-filmware \ # (1)
-    sudo nano vim git neofetch which zsh\ # (2)
-    dosfstools efibootmgr mtools grub \  # (3)
-    dhcpcd networkmanager intel-ucode # (4)
+    sudo vim git neofetch which zsh \ # (2)
+    dhcpcd networkmanager intel-ucode # (3)
 ls /mnt 
 ```
 1. We are installing the main dependencies.
 2. Must-Have utilities.
-3. Utilities, which needed for install and setup boot loader.
-4. Drivers. Replace `intel-ucode` to `amd-ucode` if your CPU is `AMD`. 
+3. Drivers. Replace `intel-ucode` to `amd-ucode` if your CPU is `AMD`. 
 
 ## Generate the FileSystemTable
 ```sh
@@ -208,4 +214,4 @@ systemctl enable NetworkManager.service
 3. Set hostname.
 
 ## Next...
-Chapter 3: [`Install Grub boot loader`](./grub_boot_loader.md).
+Chapter 3: [`Configure Grub boot loader`](./grub_boot_loader.md).

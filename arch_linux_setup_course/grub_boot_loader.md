@@ -1,20 +1,18 @@
-# Install Grub boot loader
+# Configure Grub boot loader
 
-## Create the EFI partition
+<!-- dosfstools mtools -->
+## Install Grub boot loader
 ```sh
-mkdir /boot/efi # (1)
-mount /dev/sda1 /boot/efi/ # (2)
+pacman -S grub efibootmgr 
 ```
-1. Create the `EFI` partition.
-2. Mount the `EFI` partition to `windows boot manager` partition. For me it's `sda1`.
 
 ## Create the Grub loader
 ```sh
 sudo vim /etc/default/grub ->
     GRUB_DISABLE_OS_PROBER=false # (1)
 pacman -S os-prober ntfs-3g
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --boot-directory=/boot/efi/EFI --bootloader-id=grub_uefi --recheck # (2)
-grub-mkconfig -o /boot/efi/EFI/grub/grub.cfg # (3)
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB --recheck # (2)
+grub-mkconfig -o /boot/grub/grub.cfg # (3)
 ```
 1. Uncomment this line.
 2. Install the grub loader for `x86_64` arch with id `grub_uefi`. You should recheck this command, it's may different to you.
