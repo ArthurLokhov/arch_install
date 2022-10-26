@@ -7,6 +7,7 @@ paru -S xorg-server xorg-xinit xterm
 
 ## Window Managers
 1. [`Gnome desktop environment`](./gnome_desktop_env.md).
+2. [`KDE desktop environment`](./kde_desktop_env.md).
 
 ## Install Windows fonts
 ```sh

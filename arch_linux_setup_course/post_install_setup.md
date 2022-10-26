@@ -113,4 +113,4 @@ sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/c
 ```
 
 ## Next...
-Chapter 5: [`Desktop environment(Gnome or Qtile)`](./desktop_environments/desktop_environments.md).
+Chapter 5: [`Desktop environment`](./desktop_environments/desktop_environments.md).
