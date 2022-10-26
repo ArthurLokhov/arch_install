@@ -3,7 +3,7 @@
 
 ## Install Plasma and graphical apps packages
 ```sh
-paru -S plasma-desktop sddm dolphin firefox
+paru -S plasma kde-applications sddm dolphin firefox
 ```
 
 ## Plasma and Sddm configuration

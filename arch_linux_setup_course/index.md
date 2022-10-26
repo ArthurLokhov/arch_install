@@ -11,3 +11,5 @@
 ## Extra chapters
 1. [`Nvidia configuration`](./extra/nvidia_configuration.md).
 2. [`Delete Arch linux`](./extra/delete_arch.md).
+3. [`Programs`](./extra/programs_install.md).
+4. [`Drivers`](./extra/drivers.md).
