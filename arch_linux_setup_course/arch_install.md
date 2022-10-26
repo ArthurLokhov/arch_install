@@ -56,14 +56,14 @@ clear
 
 ## Creating a partitions
 
-`WARNING`: `SDA` is my main disk, if you select other one, that disk's name will be different of `SDA`.
+`WARNING`: `nvme0n1` is my main disk, if you select other one, that disk's name will be different of `nvme0n1`.
 
 Disk Info:
 ```sh
 lsblk # (1)
-hdparm -i /dev/sda # (2)
+hdparm -i /dev/nvme0n1 # (2)
 fdisk -l # (3)
-cfdisk /dev/sda #   
+cfdisk /dev/nvme0n1 #   
 ```
 
 1. Print the list of disks and partitions.
@@ -80,14 +80,14 @@ Create a partitions, after write a partitions and exit from cfdisk.
 
 ## Formating a partitions
 ```sh
-mkfs.ext4 /dev/sda5 # (1) for root
-mkfs.ext4 /dev/sda6 # (1) for home
+mkfs.ext4 /dev/nvme0n1p5 # (1) for root
+mkfs.ext4 /dev/nvme0n1p6 # (1) for home
 clear
-mkswap /dev/sda7 # (2) for swap
-swapon /dev/sda7 # (3) for the 'swap' partition
-mount /dev/sda5 /mnt # (4) for the 'root' partition
+mkswap /dev/nvme0n1p7 # (2) for swap
+swapon /dev/nvme0n1p7 # (3) for the 'swap' partition
+mount /dev/nvme0n1p5 /mnt # (4) for the 'root' partition
 mkdir /mnt/home # (5)
-mount /dev/sda6 /mnt/home # (4) for the 'home' partition
+mount /dev/nvme0n1p6 /mnt/home # (4) for the 'home' partition
 ```
 1. Formatting the partition with correct format.
 2. Formatting the partition with `swap` format.
@@ -98,10 +98,10 @@ mount /dev/sda6 /mnt/home # (4) for the 'home' partition
 ## Create the EFI partition
 ```sh
 mkdir /mnt/efi # (1)
-mount /dev/sda1 /mnt/efi/ # (2)
+mount /dev/nvme0n1p1 /mnt/efi/ # (2)
 ```
 1. Create the `EFI` partition.
-2. Mount the `EFI` partition to `windows boot manager` partition. For me it's `sda1`.
+2. Mount the `EFI` partition to `windows boot manager` partition. For me it's `nvme0n1p1`.
 
 ## Setting up fastest mirrors
 ```sh

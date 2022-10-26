@@ -1,9 +1,8 @@
 # Configure Grub boot loader
 
-<!-- dosfstools mtools -->
 ## Install Grub boot loader
 ```sh
-pacman -S grub efibootmgr 
+pacman -S grub efibootmgr dosfstools mtools
 ```
 
 ## Create the Grub loader

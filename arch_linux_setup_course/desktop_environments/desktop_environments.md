@@ -40,16 +40,6 @@ curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/conf
 1. Unless you use raw X.org, you probably won’t need this. :)
 2. Install my kitty.conf.
 
-## Configure ZSH
-```sh
-paru -S zsh-theme-powerlevel10k
-vim ~/.zshrc # (1)
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.p10k.zsh' > ~/.p10k.zsh # (2)
-```
-
-1. Add `source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme`.
-2. Install my .p10k.zsh.
-
 ## Configure neofetch
 ```sh
 curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/neofetch.conf' > ~/.config/neofetch/neofetch.conf # (1)

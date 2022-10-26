@@ -19,4 +19,6 @@ git clone https://aur.archlinux.org/rtl88xxau-aircrack-dkms-git.git
 cd tl88xxau-aircrack-dkms-git
 makepkg -s
 paru -U  rtl88xxau-aircrack-dkms-git-r1211.e7a4a39-1-x86_64.pkg.tar.zst
+sudo systemctl stop dhcpcd.service
+sudo systemctl disable dhcpcd.service
 ```
