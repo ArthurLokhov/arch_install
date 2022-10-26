@@ -30,10 +30,6 @@ vim ~/.xprofile ->
 
 ## Reboot
 ```sh
-sudo reboot
-```
-
-## Post reboot
-```sh
 sudo paru -Syyu
+sudo reboot
 ```
