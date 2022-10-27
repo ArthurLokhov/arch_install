@@ -5,9 +5,48 @@
 paru -S xorg-server xorg-xinit xterm
 ```
 
-## Window Managers
-1. [`Gnome desktop environment`](./gnome_desktop_env.md).
-2. [`KDE desktop environment`](./kde_desktop_env.md).
+## Install Gnome DE and graphical apps packages
+```sh
+paru -S baobab eog evince file-roller gdm gedit gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-logs gnome-screenshot flameshot gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor gnome-tweaks gnome-menus gvfs gvfs-google gvfs-smb mutter nautilus sushi dconf-editor google-chrome
+```
+
+## Gdm configuration
+```sh
+sudo vim /etc/gdm/custom.conf # (1)
+sudo systemctl enable gdm.service
+```
+
+1. Uncomment the line `WaylandEnable=false`.
+
+## Activate Bluetooth service
+```sh
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+```
+
+## Activate numlock on startup
+```sh
+paru -S numlockx
+vim ~/.xprofile ->
+    if [ -x /usr/bin/numlockx ]; then
+            /usr/bin/numlockx on
+    fi
+```
+
+## Reboot
+```sh
+sudo reboot
+```
+
+## Install GNOME extensions
+```sh
+paru -S gnome-browser-connector
+```
+
+## Configure font antialiasing and other
+1. Launch Tweaks app.
+2. Fonts > Antialiasing > Subpixel.
+3. Download and setup the wallpaper.
 
 ## Install Windows fonts
 ```sh
