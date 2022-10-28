@@ -30,7 +30,6 @@ Option "Coolbits" "28"
 ```
 And this lines in `Screen` section:
 ```sh
-Option "metamodes" "nvidia-auto-select +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
 Option "AllowInderectGLXProtocol" "off"
 ```
 5. Launch to test if all cards are detected.
