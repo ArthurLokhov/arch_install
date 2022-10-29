@@ -81,8 +81,26 @@ systemctl --user enable gamemoded && systemctl --user start gamemoded # (1)
 paru -S libstrangle # (2)
 paru -S mangohud
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/MangoHud/MangoHud.conf" > ~/.config/MangoHud/MangoHud.conf # (3)
+paru -S vkbasalt
+mkdir ~/.config/vkBasalt && cp /usr/share/vkBasalt/vkBasalt.conf.example ~/.config/vkBasalt/vkBasalt.conf # (4)
 ```
 
 1. With Steam use `gamemoderun %command%`.
 2. `strangle -v 1 60 %command%` enable VSync and 60fps. `strangle -v 3 120:60 %command%` enable adaptive VSync with 120fps, but 60fps on battery power.
 3. With Steam use `mangohud %command%` for 64-bit games and `mangohud.x86 %command%` for 32-bit games.
+4. With Steam use `ENABLE_VKBASALT=1 %command%`.
+
+## Xbox controller
+```sh
+sudo vim /etc/modprobe.d/xbox_bt.conf # (1)
+paru -S dkms bluez bluez-utils
+git clone https://aur.archlinux.org/xpadneo-dkms-git.git && cd xpadneo-dkms-git && makepkg -si
+```
+
+1. Add this line `options bluetooth disable_ertm=1`.
+
+## Install Steam
+```sh
+paru -S lib32-fontconfig
+paru -S steam
+```
