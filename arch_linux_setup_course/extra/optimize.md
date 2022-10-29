@@ -109,5 +109,6 @@ paru -S steam
 ## Xanmod(For Pro, not beginners)
 ```sh
 paru -S linux-xanmod linux-xanmod-headers
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo reboot
 ```
