@@ -67,9 +67,21 @@ sudo systemctl enable fstrim.timer
 paru -S pipewire pipewire-jack pipewire-alsa pavucontrol pipewire-pulse alsa-utils
 ```
 
-# Delete all unneeded programs, cache and etc
+## Delete all unneeded programs, cache and etc
 ```sh
 paru -Syy
 paru -Scc
 paru -Suu
 ```
+
+## Gaming
+```sh
+paru -S gamemode lib32-gamemode
+systemctl --user enable gamemoded && systemctl --user start gamemoded # (1)
+paru -S libstrangle # (2)
+paru -S mangohud
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/MangoHud/MangoHud.conf" > ~/.config/MangoHud/MangoHud.conf
+```
+
+1. With Steam use `gamemoderun %command%`.
+2. `strangle -v 1 60 %command%` enable VSync and 60fps. `strangle -v 3 120:60 %command%` enable adaptive VSync with 120fps, but 60fps on battery power.
