@@ -80,8 +80,9 @@ paru -S gamemode lib32-gamemode
 systemctl --user enable gamemoded && systemctl --user start gamemoded # (1)
 paru -S libstrangle # (2)
 paru -S mangohud
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/MangoHud/MangoHud.conf" > ~/.config/MangoHud/MangoHud.conf
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/MangoHud/MangoHud.conf" > ~/.config/MangoHud/MangoHud.conf # (3)
 ```
 
 1. With Steam use `gamemoderun %command%`.
 2. `strangle -v 1 60 %command%` enable VSync and 60fps. `strangle -v 3 120:60 %command%` enable adaptive VSync with 120fps, but 60fps on battery power.
+3. With Steam use `mangohud %command%` for 64-bit games and `mangohud.x86 %command%` for 32-bit games.
