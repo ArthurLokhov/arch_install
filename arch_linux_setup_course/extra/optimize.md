@@ -83,6 +83,7 @@ paru -S mangohud
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/MangoHud/MangoHud.conf" > ~/.config/MangoHud/MangoHud.conf # (3)
 paru -S vkbasalt
 mkdir ~/.config/vkBasalt && cp /usr/share/vkBasalt/vkBasalt.conf.example ~/.config/vkBasalt/vkBasalt.conf # (4)
+paru -S lutris
 ```
 
 1. With Steam use `gamemoderun %command%`.
@@ -103,4 +104,10 @@ git clone https://aur.archlinux.org/xpadneo-dkms-git.git && cd xpadneo-dkms-git 
 ```sh
 paru -S lib32-fontconfig
 paru -S steam
+```
+
+## Xanmod(For Pro, not beginners)
+```sh
+paru -S linux-xanmod linux-xanmod-headers
+sudo reboot
 ```
