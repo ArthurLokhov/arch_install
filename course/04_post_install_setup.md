@@ -40,6 +40,3 @@ sudo vim /etc/pacman.conf ->
 1. Check that everything is OK.
 2. Make sure that CombinedUpgrade, UpgradeMenu, NewsOnUpgrade are activated. Add SkipReview.
 3. Uncomment the line Color.
-
-## Next...
-Chapter 5: [`Desktop environment`](./05_desktop_environments.md).

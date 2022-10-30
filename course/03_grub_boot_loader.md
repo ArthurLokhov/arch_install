@@ -38,6 +38,3 @@ mount /dev/sda1 /boot/efi/
 grub-mkconfig -o /boot/efi/EFI/grub/grub.cfg
 reboot
 ```
-
-## Next...
-Chapter 4: [`Post installing setup`](./04_post_install_setup.md).

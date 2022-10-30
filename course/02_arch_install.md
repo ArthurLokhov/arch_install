@@ -212,6 +212,3 @@ systemctl enable NetworkManager.service
 1. Gives you the network interface name and the driver name.
 2. Verify which network device is plugged.
 3. Set hostname.
-
-## Next...
-Chapter 3: [`Configure Grub boot loader`](./03_grub_boot_loader.md).
