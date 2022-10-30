@@ -1,6 +1,6 @@
 # Drivers
 
-# Keyboard
+## Keyboard
 ```sh
 setxkbmap -print -verbose 10
 sudo vim /etc/X11/xorg.conf.d/00-keyboard.conf
