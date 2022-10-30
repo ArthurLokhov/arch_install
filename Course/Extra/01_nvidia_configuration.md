@@ -3,7 +3,7 @@
 ## Nvidia drivers(Standard)
 ```sh
 paru -S linux-headers
-paru -S nvidia nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
+paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
 sudo vim /etc/mkinitcpio.conf ->
     MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
 mkinitcpio -P linux

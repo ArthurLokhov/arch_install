@@ -17,4 +17,4 @@
 3. Reboot `Windows` and open `Boot Menu`.
 
 ## Next...
-Chapter 2: [`Base Arch installation`](./arch_install.md).
+Chapter 2: [`Base Arch installation`](./02_arch_install.md).

@@ -1,3 +1,0 @@
-## Delete Arch linux
-
-## Coming soon...

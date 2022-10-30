@@ -214,4 +214,4 @@ systemctl enable NetworkManager.service
 3. Set hostname.
 
 ## Next...
-Chapter 3: [`Configure Grub boot loader`](./grub_boot_loader.md).
+Chapter 3: [`Configure Grub boot loader`](./03_grub_boot_loader.md).

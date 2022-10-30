@@ -42,4 +42,4 @@ sudo vim /etc/pacman.conf ->
 3. Uncomment the line Color.
 
 ## Next...
-Chapter 5: [`Desktop environment`](./desktop_environments/desktop_environments.md).
+Chapter 5: [`Desktop environment`](./05_desktop_environments.md).

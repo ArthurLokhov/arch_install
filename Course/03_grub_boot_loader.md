@@ -40,4 +40,4 @@ reboot
 ```
 
 ## Next...
-Chapter 4: [`Post installing setup`](./post_install_setup.md).
+Chapter 4: [`Post installing setup`](./04_post_install_setup.md).
