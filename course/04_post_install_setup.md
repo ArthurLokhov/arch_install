@@ -11,7 +11,7 @@ ping -c 3 www.google.com # (1)
 1. Проверяем есть ли подключение к интернету.
 2. Используем данную команду если надо подключиться к интернету с именем`<SSID>` и паролем`<password>`.
 
-## Activate TRIM for SSDs
+## Активируйте TRIM для SSD
 
 ```
 sudo systemctl enable fstrim.timer
