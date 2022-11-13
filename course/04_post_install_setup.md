@@ -103,3 +103,23 @@ curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/conf
 ```
 
 1. Установите мой конфиг - kitty.conf
+
+## Настройка зеркал
+
+```
+sudo vim /etc/pacman.conf # (1)
+paru -Sy
+paru -S reflector rsync curl
+sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo vim /etc/pacman.d/mirrorlist # (2)
+paru -Suy
+paru -S ccache grub-customizer
+```
+
+1. Раскомментируйте блок `[multilib]`.
+2. Добавьте yandex зеркала.
+
+```
+#Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
+#Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
+```
