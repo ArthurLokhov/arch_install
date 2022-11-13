@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Руководство по установке Arch Linux](README.md)
+* [💿 Руководство по установке Arch Linux](README.md)
   * [📗 Заглавие](rukovodstvo-po-ustanovke-arch-linux/course/README.md)
     * [🔌 Предварительная настройка](rukovodstvo-po-ustanovke-arch-linux/course/01\_presetup.md)
     * [⚙ Базовая установка Arch Linux](rukovodstvo-po-ustanovke-arch-linux/course/02\_arch\_install.md)
