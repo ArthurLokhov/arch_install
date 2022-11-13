@@ -1,5 +1,5 @@
-# Arch Linux Install
+# Установка Arch Linux
 
-It is my manual of how install the arch linux with dual boot.
+В данном руководстве я разобрал установку Arch linux, а также свою конфигурацию.
 
-<img src="./assets/arch.jpg" alt="arch linux logo" />
+![arch linux logo](assets/arch.jpg)
