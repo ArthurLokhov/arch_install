@@ -45,3 +45,21 @@ sudo vim /etc/pacman.conf ->
 1. Убедитесь, что все в порядке.
 2. Раскомментируйте строчки с CombinedUpgrade, UpgradeMenu, NewsOnUpgrade. Добавьте ниже SkipReview.
 3. Раскомментируйте строчку с Color.
+
+## Bluetooth
+
+```
+paru -S bluez bluez-utils pipewire pipewire-pulse # (1)
+mkdir -p ~/.config/pipewire/media-session.d/
+cp /usr/share/pipewire/*.conf ~/.config/pipewire/ # (2)
+vim ~/.config/pipewire/pipewire.conf # (3)
+
+systemctl --user enable pipewire.service
+systemctl --user enable pipewire-pulse.service
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+```
+
+1. Установите нужные для работы Bluetooth  библиотеки.
+2. Скопируйте стандартный конфиг.
+3. Замените
