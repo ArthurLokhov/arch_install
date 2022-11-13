@@ -62,4 +62,4 @@ sudo systemctl start bluetooth.service
 
 1. Установите нужные для работы Bluetooth  библиотеки.
 2. Скопируйте стандартный конфиг.
-3. Замените
+3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
