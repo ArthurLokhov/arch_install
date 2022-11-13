@@ -1,6 +1,0 @@
----
-description: by ArthurLokhov
----
-
-# 📗 Руководство
-
