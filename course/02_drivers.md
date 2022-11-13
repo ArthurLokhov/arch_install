@@ -1,9 +1,9 @@
-# Drivers
+# 🪛 Настройка драйверов
 
-## Keyboard
-```sh
-setxkbmap -print -verbose 10
-sudo vim /etc/X11/xorg.conf.d/00-keyboard.conf
+## Клавиатура
+
+```
+sudo vim /etc/X11/xorg.conf.d/00-keyboard.conf # (1)
     Section "InputClass"
             Identifier "system-keyboard"
             MatchIsKeyboard "on"
@@ -13,8 +13,11 @@ sudo vim /etc/X11/xorg.conf.d/00-keyboard.conf
     EndSection
 ```
 
-## TP-link Usb
-```sh
+1. Создаем файл 00-keyboard.conf с описанием того, как должна себя вести клавиатура.
+
+## Драйвер для  Wireless USB Driver от компании TP-link
+
+```
 git clone https://aur.archlinux.org/rtl88xxau-aircrack-dkms-git.git
 cd tl88xxau-aircrack-dkms-git
 makepkg -s
