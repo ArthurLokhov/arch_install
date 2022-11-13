@@ -1,34 +1,30 @@
-# Базовая установка Arch Linux
+# Base Arch installation
 
-## Меняем шрифт на более удобный:
-
+## Change terminal font:
+```sh
+setfont ter-132n # (1)
 ```
-setfont ter-132n
-```
+1. Set font with naming `ter-132n`.
 
-1. Крайне советую ставить особенно тем, у кого 4к монитор. Изначально шрифт не такой четкий и читабельный.
-
-## Устанавливаем в качестве раскладки qwerty с поддержкой русского языка
-
-```
+## Change keyboard layout
+```sh
 ls /usr/share/kbd/keymaps/i386/qwerty/ # (1)
 loadkeys /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz # (2) 
 ```
+1. Print the list of keyboard layouts.
+2. Load the keyboard layout. I choose `QWERTY` with russian letters support.
 
-1. Выводит список всех возможных раскладок типа qwerty.
-2. Устанавливаем  нашу раскладку. Я выбрал раскладку с поддержкой русского языка.
+## Set font with russian support
+`Coming Soon...`
 
-## Проверяем правильность установки EFI:
-
-```
+## Verify the boot mode
+```sh
 ls /sys/firmware/efi/efivars # (1)
 ```
+1. If the command shows the directory without error, then the system is booted in `UEFI` mode. 
 
-1. Если ошибок нет, то мы запустились с поддержкой UEFI.
-
-## Подключаемся к Wi-Fi
-
-```
+## Connect to the Wi-Fi
+```sh
 ip link # (1)
 iwctl # (2)
 help
@@ -40,14 +36,13 @@ iwctl --passphrase `password` station `wlan` connect  `SSID`  # (3)
 ping archlinux.org -c 5  # (4)
 ```
 
-1. Убедимся в том, что наше интернет устройство включено.
-2. Для подключение к Wi-Fi используем утилиту iwctl.
-3. Подключаемся к Wi-Fi. Указываем пароль, наше устройство и наименование сети.
-4. Проверяем подключение к интернету.
+1. Ensure your network interface is listed and enabled.
+2. Wi-Fi—authenticate to the wireless network using iwctl.
+3. Connect to the Wi-Fi.
+4. Check the connection to Ethernet.
 
-## Настраиваем дату и время:
-
-```
+## Update time and date:
+```sh
 timedatectl status  # (1)
 timedatectl list-timezones # (2)
 timedatectl set-timezone <timezone> # (3)
@@ -55,37 +50,36 @@ timedatectl status
 clear
 ```
 
-1. Проверяем изначально установленное время.
-2. Выводим список доступных временных зон.
-3. Устанавливаем выбранную временную зону.
+1. Use to ensure the system clock is accurate.
+2. Use to get list of timezones.
+3. Use to setup the choose timezone.
 
-## Создаем разделы под линукс
+## Creating a partitions
 
-`ВНИМАНИЕ`: `nvme0n1` это мой диск, у вас он может называться по  другому.
+`WARNING`: `nvme0n1` is my main disk, if you select other one, that disk's name will be different of `nvme0n1`.
 
-```
+Disk Info:
+```sh
 lsblk # (1)
 hdparm -i /dev/nvme0n1 # (2)
 fdisk -l # (3)
 cfdisk /dev/nvme0n1 #   
 ```
 
-1. Выводит информацию о существующих разделах диска.
-2. Название диска можно проверить в  поле 'Model'.
-3. Работает как lsblk, но выводит больше информации.
-4. Выбираем диск, на котором будем делать разделы. Для создания разделом я использую`cfdisk`, но ты можешь использовать`fdisk`.
+1. Print the list of disks and partitions.
+2. Check the disk name in field 'Model'.
+3. More information then the first command.
+4. Choose the disk, which you will be creating a partitions. I am use `cfdisk`, but you can use the `fdisk`.
 
-### Важные разделы:
+### Main partitions:
+1. root(`10+Gb`)(`100Gb` - my choose)
+2. home(`10+Gb`)(`140Gb` - my choose)
+3. swap(`4+Gb`)(`10Gb` - my choose)
 
-1. root(`10+Gb`)(200Gb- мой выбор)
-2. home(`10+Gb`)(200Gb - мой выбор)
-3. swap(`4+Gb`)(10Gb - мой выбор)
+Create a partitions, after write a partitions and exit from cfdisk.
 
-Создаем разделы, затем записываем их и выходим из программы.
-
-## Форматируем разделы
-
-```
+## Formating a partitions
+```sh
 mkfs.ext4 /dev/nvme0n1p5 # (1) for root
 mkfs.ext4 /dev/nvme0n1p6 # (1) for home
 clear
@@ -95,76 +89,64 @@ mount /dev/nvme0n1p5 /mnt # (4) for the 'root' partition
 mkdir /mnt/home # (5)
 mount /dev/nvme0n1p6 /mnt/home # (4) for the 'home' partition
 ```
+1. Formatting the partition with correct format.
+2. Formatting the partition with `swap` format.
+3. Mount the `swap` partition.
+4. Mount the partition with your correct folder.
+5. Create the folder for `home` partition.
 
-1. Форматируем разделы в нужный нам формат  ext4.
-2. Форматируем раздел в swap формат.
-3. Монтируем в систему swap раздел.
-4. Монтируем разделы в указанные папки.
-5. Создаем папку для папки пользователя.
-
-## Создаем EFI раздел
-
-```
+## Create the EFI partition
+```sh
 mkdir /mnt/efi # (1)
 mount /dev/nvme0n1p1 /mnt/efi/ # (2)
 ```
+1. Create the `EFI` partition.
+2. Mount the `EFI` partition to `windows boot manager` partition. For me it's `nvme0n1p1`.
 
-1. Создает EFI раздел.
-2. Монтируем в папку тот раздел, на котором установлен Windows Boot Loader.
-
-## Устанавливаем самые быстрые зеркала
-
-```
+## Setting up fastest mirrors
+```sh
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak # (1)
 pacman -Sy # (2) 
 pacman -S pacman-contrib # (3)
 rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 ```
+1. Create the mirrorlist backup.
+2. Update package list.
+3. Download contribute scripts to pacman.
+4. This command select the first 10 fastest mirrors and rewrite mirrorlist with them.
 
-1. Создаем backup файла mirrorlist.
-2. Обновляем список доступных пакетов.
-3. Устанавливаем вспомогательные скрипты для pacman.
-4. Эта команда установит 10 самых быстрых зеркал и запишет их в файл mirrorlist.
-
-## Установка ядра linux
-
-```
+## Install essential packages
+```sh
 pacstrap /mnt base base-devel linux linux-filmware \ # (1)
     sudo vim git neofetch which zsh \ # (2)
     dhcpcd networkmanager intel-ucode # (3)
 ls /mnt 
 ```
+1. We are installing the main dependencies.
+2. Must-Have utilities.
+3. Drivers. Replace `intel-ucode` to `amd-ucode` if your CPU is `AMD`. 
 
-1. Устанавливаем основные  зависимости.
-2. Must-Have утилиты.
-3. Драйвера. Замените`intel-ucode` на `amd-ucode`, если вы используете AMD.
-
-## Генерируем File System Table
-
-```
+## Generate the FileSystemTable
+```sh
 genfstab -U /mnt >> /mnt/etc/fstab # Generate File System Table
 ```
 
-## Заходим в установленную систему
-
-```
+## Enter the newly installed Arch
+```sh
 arch-chroot /mnt
 ```
 
-## Генерируем локали
-
-```
+## Generate locales
+```sh
 vim /etc/locale.gen ->
     en_US.UTF-8 # (1)
     ru_RU.UTF-8 # (2)
 locale-gen
 ```
+1. Uncomment this line.
 
-1. Раскомментируйте  указанные строки.
-
-## Настройка локалей
-
-```
+## Configure locales
+```sh
 vim /etc/locale.conf ->
     LANG=en_US.UTF-8 # (1)
     LC_ADDRESS=ru_RU.UTF-8
@@ -180,54 +162,46 @@ vim /etc/locale.conf ->
     LC_TELEPHONE=ru_RU.UTF-8
     LC_TIME=ru_RU.UTF-8
 ```
+1. For UI I use the english letters, but for another I use russian letters.
 
-1. Интерфейс будет на английском, а все остальное на русском.
-
-Можете просто скачать данный файл:
-
-```
+Or automotive this process:
+```sh
 cd /etc/
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/locale.conf" -O
 ```
 
-## Настройка клавиатуры
-
-```
+## Configure keyboard layout
+```sh
 sudo echo "KEYMAP=ru" >> /etc/vconsole.conf 
 ```
 
-## Устанавливаем временную зону
-
-```
+## Set the timezone
+```sh
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 ```
 
-## Меняем пароль root пользователя
-
-```
+## Set a root password
+```sh
 passwd
 ```
 
-## Создаем пользователя без привилегий
-
-```
+## Create a non-root user
+```sh
 useadd -m -g users -G wheel,storage,power -s /bin/zsh <user_name> # (1)
 passwd <user_name>
 EDITOR=vim visudo ->
     %wheel ALL=(ALL) ALL # (2)
 ```
+1. Create a non-root user with zsh terminal, with permissions of wheel, storage and power. `<user_name>` is your username.
+2. Uncomment this line.
 
-1. Создаем пользователя без привилегий с zsh терминалом, с разрешениями к устройству, хранилищу и энергии. Вместо `<user_name>` вставьте свое имя.
-2. Раскомментируйте  указанную строку.
-
-## Настройка сети
-
-```
+## Network configuration
+```sh
 sudo pacman -S lshw
-sudo lshw -C network
-cat /sys/class/net/<network_device>/carrier # (1)
+sudo lshw -C network # (1)
+cat /sys/class/net/<network_device>/carrier # (2)
 echo 'artlkv' > etc/hostname
-sudo vim /etc/hosts -> # (2)
+sudo vim /etc/hosts -> # (3)
     127.0.0.1   localhost
     ::1         localhost   
     127.0.0.1   artlkv.localdomain localhost
@@ -235,5 +209,6 @@ systemctl enable dhcpcd.service
 systemctl enable NetworkManager.service
 ```
 
-1. Проверяем, что интернет устройство подключено.
-2. Устанавливаем hosts.
+1. Gives you the network interface name and the driver name.
+2. Verify which network device is plugged.
+3. Set hostname.
