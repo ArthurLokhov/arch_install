@@ -1,17 +1,20 @@
-# Pre-setup
+# Предварительная настройка
 
-## Windows Configuration
-1. Disable `Fast boot`.
-2. Set the univertal UTC time.
-- Open `REGEDIT` and find `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\`.
-- Create a `QWORD` with name `RealTimeIsUniversal` and with value `1`.
-- Open time and date settings, disable `Set time automatically` and `Set timezone automatically`.
-- Re-enable those settings again.
+## Настройка Windows
 
-## Download Arch Linux with Dualboot
-1. Download [Torrent file](https://archlinux.org/releng/releases/).
-2. Install .iso with Rufus(With `GPT`):
+1. Отключите функцию`Fast boot` в вашем bios. &#x20;
+2. Установите локальное время как универсальное. Для этого:
 
-<img src="../assets/rufus.png" alt="rufus install" />
+* Откройте`REGEDIT` и найдите `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\`.
+* Создайте`QWORD` с именем`RealTimeIsUniversal` и значением`1`.
+* Откройте настройки даты и времени и отключите функции`Set time automatically` и`Set timezone automatically`.
+* Затем заново включите их.
 
-3. Reboot `Windows` and open `Boot Menu`.
+## Установка образа Arch Linux
+
+1. Скачайте нужный вам торрент файл по этой ссылке - [Torrent file](https://archlinux.org/releng/releases/).
+2. Установите .iso образ, обязательно включите GPT:
+
+![rufus install](../assets/rufus.png)
+
+Перезапустите Windows и запустите установочную флешку с Arch Linux через Boot Menu.
