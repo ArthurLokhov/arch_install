@@ -15,6 +15,6 @@
 1. Скачайте нужный вам торрент файл по этой ссылке - [Torrent file](https://archlinux.org/releng/releases/).
 2. Установите .iso образ, обязательно включите GPT:
 
-![rufus install](../assets/rufus.png)
+![rufus install](../../assets/rufus.png)
 
 Перезапустите Windows и запустите установочную флешку с Arch Linux через Boot Menu.
