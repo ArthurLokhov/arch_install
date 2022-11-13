@@ -64,6 +64,12 @@ sudo systemctl start bluetooth.service
 2. Скопируйте стандартный конфиг.
 3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
 
+## Настройка звуковой карты
+
+```
+paru -S pipewire pipewire-jack pipewire-alsa pavucontrol pipewire-pulse alsa-utils
+```
+
 ## Настройка neofetch
 
 ```
@@ -122,4 +128,20 @@ paru -S ccache grub-customizer
 ```
 #Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
 #Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
+```
+
+## Установка кастомного ядра Xanmod
+
+```
+paru -S linux-xanmod linux-xanmod-headers
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo reboot
+```
+
+## Удаление остаточных файлов, мусора
+
+```
+paru -Syy
+paru -Scc
+paru -Suu
 ```

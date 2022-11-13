@@ -52,3 +52,24 @@ Option "Coolbits" "28"
 ```
 Option "AllowInderectGLXProtocol" "off"
 ```
+
+## Установка микрокодеков
+
+```
+paru -S intel-ucode iucode-tool # (1)
+paru -S amd-ucode iucode-tool # (2)
+sudo mkinitcpio -P
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+1. Если вы используйте CPU от Intel.
+2. Если вы используйте CPU от AMD.
+
+## Дополнительные настройки Nvidia (Tweaks)
+
+```
+cd ~/Downloads
+git clone https://aur.archlinux.org/nvidia-tweaks.git
+cd nvidia-tweaks
+makepkg -sric
+```
