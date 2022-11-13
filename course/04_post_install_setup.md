@@ -93,3 +93,13 @@ paru -S ttf-dejavu noto-fonts
 paru -S nerd-fonts-jetbrains-mono
 paru -S nerd-fonts-fira-code
 ```
+
+## Установка терминального эмулятора kitty
+
+```
+paru -S kitty
+mkdir -p ~/.config/kitty
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/kitty/kitty.conf' > ~/.config/kitty/kitty.conf # (1)
+```
+
+1. Установите мой конфиг - kitty.conf
