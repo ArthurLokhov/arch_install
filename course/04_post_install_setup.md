@@ -63,3 +63,11 @@ sudo systemctl start bluetooth.service
 1. Установите нужные для работы Bluetooth  библиотеки.
 2. Скопируйте стандартный конфиг.
 3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
+
+## Настройка neofetch
+
+```
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/neofetch.conf' > ~/.config/neofetch/neofetch.conf # (1)
+```
+
+1. Установите мой конфиг - neofetch.conf.
