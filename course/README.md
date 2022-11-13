@@ -1,6 +1,2 @@
----
-description: by ArthurLokhov
----
-
-# Руководство
+# Курс
 
