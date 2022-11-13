@@ -1,9 +1,9 @@
-# Zsh configure
+# 🔮 Настройка Zsh
 
+## Кастомизация ZSH
 
-## Congigure ZSH
-```sh
-pacman -S zsh-completions zsh-autosuggestions zsh-fast-syntax-highlighting fzf # (1)
+```
+paru -S zsh-completions zsh-autosuggestions zsh-fast-syntax-highlighting fzf # (1)
 vim ~/.zshrc ->
     # Zsh Autosuggestions
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
@@ -24,18 +24,18 @@ vim ~/.zshenv ->
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 ```
 
-1. Install ZSH extensions.
+## Устанавливаем вспомогательные утилиты
 
-## Install useful commands
-```sh
-pacman -S bat exa fd
+```
+paru -S bat exa fd
 ```
 
-1. `bat` is a replacement of `cat` with syntax highlighting, line numbers and etc.
-2. `exa` is a replacement of `ls` with better coloring, git support, etc.
+1. `bat` является заменой для`cat` с подсветкой синтаксиса, строк и т.д. .
+2. `exa` это замена для `ls` с поддержкой git, подсветкой и т.д. .
 
-## Configure Bat
-```sh
+## Настройка Bat
+
+```
 mkdir ~/Downloads
 cd ~/Downloads
 git clone git@github.com:catppuccin/bat.git
@@ -48,36 +48,35 @@ vim ~/.config/bat/config ->
     --theme="Catppuccin-macchiato"
 ```
 
-## Configure Exa
-```sh
+## Настройка Exa
+
+```
 vim ~/.zshrc ->
-    alias exa"exa --color --time-style=long-iso"
+    alias exa="exa --color --time-style=long-iso"
     alias ls="exa"
     alias la="ls --long --header --icons"
     alias lg="ls --long --header --icons --git"
 ```
 
-## Configure fd
-```sh
+## Настройка fd
+
+```
 vim ~/.zshrc ->
-    alias fd="fd -HI" #(1)
+    alias fd="fd -HI"
 ```
 
-1. Ensures `fd` doesn’t filter hidden directories or files.
+## Настройка Powerlevel10k
 
-
-
-## Configure Powerlevel10k
-```sh
+```
 paru -S zsh-theme-powerlevel10k
 vim ~/.zshrc # (1)
 ```
 
-1. Add `source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme`.
+1. Добавьте строку`source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme`.
 
+## Автоматическая установка конфигов
 
-## Automation install configs
-```sh
+```
 cd ~
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/zsh/.zshenv" -O
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/zsh/.zshrc" -O

@@ -8,6 +8,5 @@
   * [🔧 Настройка Arch после установки](course/04\_post\_install\_setup.md)
   * [🔋 Драйвера Nvidia](course/extra/01\_nvidia\_configuration.md)
   * [🪛 Настройка драйверов](course/extra/02\_drivers.md)
-  * [Оконное окружение](course/05\_desktop\_environments.md)
-  * [Экстра](course/extra/README.md)
-    * [Настройка Zsh](course/extra/03\_zsh\_configure.md)
+  * [🖥 (Не закончена) Оконное окружение](course/05\_desktop\_environments.md)
+  * [🔮 Настройка Zsh](course/03\_zsh\_configure.md)
