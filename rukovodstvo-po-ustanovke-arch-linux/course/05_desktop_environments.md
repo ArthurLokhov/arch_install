@@ -55,6 +55,14 @@ curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/config
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/rofi/config.rasi" >> ~/.config/rofi/config.rasi
 ```
 
+## Настройка Qtile
+
+```
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/config.py" >> ~/.config/qtile/config.py
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/owm.py" >> ~/.config/qtile/owm.py
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/autostart.sh" >> ~/.config/qtile/autostart.sh
+```
+
 ## Перезагрузка
 
 ```
