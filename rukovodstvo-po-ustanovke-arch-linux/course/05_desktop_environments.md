@@ -55,6 +55,12 @@ curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/config
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/rofi/config.rasi" >> ~/.config/rofi/config.rasi
 ```
 
+## Настройка Dunst
+
+```
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/dunst/dunstrc" >> ~/.config/dunst/dunstrc
+```
+
 ## Настройка Qtile
 
 ```
