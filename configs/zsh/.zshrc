@@ -21,3 +21,8 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 # Sources
+
+# Other
+neofetch
+# eval "$(starship init zsh)"
+# Other
