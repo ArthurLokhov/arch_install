@@ -73,7 +73,7 @@ paru -S pipewire pipewire-jack pipewire-alsa pavucontrol pipewire-pulse alsa-uti
 ## Настройка neofetch
 
 ```
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/neofetch.conf' > ~/.config/neofetch/neofetch.conf # (1)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/config.conf' > ~/.config/neofetch/config.conf # (1)
 ```
 
 1. Установите мой конфиг - neofetch.conf.

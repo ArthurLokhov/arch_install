@@ -1,33 +1,27 @@
-# 🖥 Оконное окружение
+# 🖥 (Не закончена) Оконное окружение
 
-## Установка X сервера
-
-```
-paru -S xorg-server xorg-xinit
-```
-
-## Установка Qtile
+## X.org install
 
 ```
-paru -S qtile qtile-extras-git gdm rofi python-dbus-next network-manager-applet pasystray blueman bottom picom-git
+paru -S xorg-server xorg-xinit xterm
 ```
 
-## Настройка Gdm
+## Install Gnome DE and graphical apps packages
+
+```
+paru -S baobab eog evince file-roller gdm gedit gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-logs gnome-screenshot flameshot gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor gnome-tweaks gnome-menus gvfs gvfs-google gvfs-smb mutter nautilus sushi dconf-editor google-chrome
+```
+
+## Gdm configuration
 
 ```
 sudo vim /etc/gdm/custom.conf # (1)
 sudo systemctl enable gdm.service
 ```
 
-1. Раскомментируйте `WaylandEnable=false`.
+1. Uncomment the line `WaylandEnable=false`.
 
-## Установка полезного софта
-
-```
-paru -S baobab eog evince file-roller gnome-characters gnome-calculator gnome-disk-utility gnome-font-viewer gnome-logs flameshot gnome-settings-daemon nautilus
-```
-
-## Активация numlockx во время старта системы
+## Activate numlock on startup
 
 ```
 paru -S numlockx
@@ -37,10 +31,22 @@ vim ~/.xprofile ->
     fi
 ```
 
-## Перезагрузка
+## Reboot
 
 ```
 sudo reboot
 ```
+
+## Install GNOME extensions
+
+```
+paru -S gnome-browser-connector
+```
+
+## Configure font antialiasing and other
+
+1. Launch Tweaks app.
+2. Fonts > Antialiasing > Subpixel.
+3. Download and setup the wallpaper.
 
 ##
