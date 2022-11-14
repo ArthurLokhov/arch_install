@@ -43,6 +43,12 @@ vim ~/.xprofile ->
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/picom/picom.conf" >> ~/.config/picom/picom.conf
 ```
 
+## Настройка Flameshot
+
+```
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/flameshot/flameshot.ini" >> ~/.config/flameshot/flameshot.ini
+```
+
 ## Перезагрузка
 
 ```
