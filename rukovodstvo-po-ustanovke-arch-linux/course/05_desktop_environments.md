@@ -49,6 +49,12 @@ curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/config
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/flameshot/flameshot.ini" >> ~/.config/flameshot/flameshot.ini
 ```
 
+## Настройка Rofi
+
+```
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/rofi/config.rasi" >> ~/.config/rofi/config.rasi
+```
+
 ## Перезагрузка
 
 ```
