@@ -2,7 +2,7 @@
 alias cls="clear"
 alias g="git"
 alias ss="source ~/.zshrc"
-alias exa"exa --color --time-style=long-iso"
+alias exa="exa --color --time-style=long-iso"
 alias ls="exa"
 alias la="ls --long --header --icons"
 alias lg="ls --long --header --icons --git"
@@ -19,4 +19,5 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.p10k.zsh
 # Sources
