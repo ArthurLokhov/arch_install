@@ -67,13 +67,13 @@ sudo systemctl start bluetooth.service
 ## Настройка звуковой карты
 
 ```
-paru -S pipewire pipewire-jack pipewire-alsa pavucontrol pipewire-pulse alsa-utils
+paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack wireplumber
 ```
 
 ## Настройка neofetch
 
 ```
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/neofetch.conf' > ~/.config/neofetch/neofetch.conf # (1)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/config.conf' > ~/.config/neofetch/config.conf # (1)
 ```
 
 1. Установите мой конфиг - neofetch.conf.
