@@ -67,7 +67,7 @@ sudo systemctl start bluetooth.service
 ## Настройка звуковой карты
 
 ```
-paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack wireplumber
+paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack wireplumber pavucontrol alsa-utils 
 ```
 
 ## Настройка neofetch
