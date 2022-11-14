@@ -1,0 +1,21 @@
+[global]
+    frame_color = "#F38BA8"
+    separator_color= frame
+    corner_radius = 15
+    font = Open Sans 14
+
+
+[urgency_low]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+
+
+[urgency_normal]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+
+
+[urgency_critical]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#FAB387"
