@@ -30,7 +30,7 @@ paru -S nautilus baobab eog evince file-roller flameshot htop firefox dunst visu
 ## Установка приложений от Gnome
 
 ```
-paru -S gnome-settings-daemon gnome-characters gnome-calculator gnome-disk-utility gnome-font-viewer gnome-logs gnome-keyring
+paru -S gnome-tweaks gnome-settings-daemon gnome-characters gnome-calculator gnome-disk-utility gnome-font-viewer gnome-logs gnome-keyring
 ```
 
 ## Активация numlockx во время старта системы
