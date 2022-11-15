@@ -67,13 +67,13 @@ sudo systemctl start bluetooth.service
 ## Настройка звуковой карты
 
 ```
-paru -S pipewire pipewire-jack pipewire-alsa pavucontrol pipewire-pulse alsa-utils
+paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack wireplumber pavucontrol alsa-utils 
 ```
 
 ## Настройка neofetch
 
 ```
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/neofetch.conf' > ~/.config/neofetch/neofetch.conf # (1)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/config.conf' > ~/.config/neofetch/config.conf # (1)
 ```
 
 1. Установите мой конфиг - neofetch.conf.
@@ -131,6 +131,10 @@ paru -S ccache grub-customizer
 ```
 
 ## Установка кастомного ядра Xanmod
+
+### ВНИМАНИЕ!!!
+
+Данная процедура длится в районе 3-х часов, так как на arch linux данное ядро не скачивается сразу скомпилированным, а компилируется с нуля.
 
 ```
 paru -S linux-xanmod linux-xanmod-headers
