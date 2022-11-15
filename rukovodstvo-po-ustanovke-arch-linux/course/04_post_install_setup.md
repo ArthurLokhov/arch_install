@@ -16,6 +16,13 @@ ping -c 3 www.google.com # (2)
 sudo systemctl enable fstrim.timer
 ```
 
+## Включаем поддержку nvidia\_persistenced
+
+```
+nvidia-smi # Проверяем работает ли видеокарта.
+sudo systemctl enable nvidia-persistenced.service
+```
+
 ## Конфигурация git
 
 ```
@@ -25,6 +32,25 @@ git config --global user.name "<name>" # (2)
 
 1. Укажите свой email вместо`<email>`.
 2. Укажите свое имя пользователя вместо `<name>`.
+
+## Создание папок пользователя
+
+```
+mkdir ~/Downloads
+mkdir ~/Documents
+mkdir ~/Videos
+mkdir ~/Pictures
+mkdir ~/Apps
+mkdir ~/Workflow
+```
+
+## Установка моих конфигов
+
+```
+cd ~/Downloads
+git clone https://github.com/ArthurLokhov/dots.git
+mv ~/Downloads/dots/* ~/
+```
 
 ## Установка Paru
 
@@ -63,27 +89,6 @@ sudo systemctl start bluetooth.service
 2. Скопируйте стандартный конфиг.
 3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
 
-## Настройка зеркал
-
-```
-sudo vim /etc/pacman.conf # (1)
-paru -Sy
-paru -S reflector rsync curl
-sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
-sudo vim /etc/pacman.d/mirrorlist # (2)
-paru -Suy
-paru -S ccache grub-customizer
-```
-
-1. Раскомментируйте блок `[multilib]`.
-
-Добавьте yandex зеркала.
-
-```
-#Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
-#Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
-```
-
 ## Настройка звуковой карты
 
 ```
@@ -114,7 +119,7 @@ paru -S nerd-fonts-jetbrains-mono
 ## Установка моего софта
 
 ```
-paru -S kitty visual-studio-code-bin discord telegram-desktop firefox
+paru -S kitty visual-studio-code-bin discord telegram-desktop firefox obs-studio
 ```
 
 ## Установка кастомного ядра Xanmod

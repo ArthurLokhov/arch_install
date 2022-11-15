@@ -230,3 +230,24 @@ systemctl enable NetworkManager.service
 
 1. Проверяем, что интернет устройство подключено.
 2. Устанавливаем hosts.
+
+## Настройка зеркал
+
+```
+sudo vim /etc/pacman.conf # (1)
+paru -Sy
+paru -S reflector rsync curl
+sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo vim /etc/pacman.d/mirrorlist # (2)
+paru -Suy
+paru -S ccache grub-customizer
+```
+
+1. Раскомментируйте блок `[multilib]`.
+
+Добавьте yandex зеркала.
+
+```
+#Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
+#Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
+```
