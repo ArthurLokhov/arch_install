@@ -64,6 +64,20 @@ sudo systemctl start bluetooth.service
 2. Скопируйте стандартный конфиг.
 3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
 
+## Настройка зеркал
+
+```
+sudo vim /etc/pacman.conf # (1)
+paru -Sy
+paru -S reflector rsync curl
+sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo vim /etc/pacman.d/mirrorlist # (2)
+paru -Suy
+paru -S ccache grub-customizer
+```
+
+1. Раскомментируйте блок `[multilib]`.
+
 ## Настройка звуковой карты
 
 ```
@@ -73,7 +87,7 @@ paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32
 ## Настройка neofetch
 
 ```
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/config.conf' > ~/.config/neofetch/config.conf # (1)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/neofetch/config.conf' > ~/.config/neofetch/config.conf # (1)
 ```
 
 1. Установите мой конфиг - neofetch.conf.
@@ -105,24 +119,10 @@ paru -S nerd-fonts-fira-code
 ```
 paru -S kitty
 mkdir -p ~/.config/kitty
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/kitty/kitty.conf' > ~/.config/kitty/kitty.conf # (1)
+curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/kitty/kitty.conf' > ~/.config/kitty/kitty.conf # (1)
 ```
 
 1. Установите мой конфиг - kitty.conf
-
-## Настройка зеркал
-
-```
-sudo vim /etc/pacman.conf # (1)
-paru -Sy
-paru -S reflector rsync curl
-sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
-sudo vim /etc/pacman.d/mirrorlist # (2)
-paru -Suy
-paru -S ccache grub-customizer
-```
-
-1. Раскомментируйте блок `[multilib]`.
 2. Добавьте yandex зеркала.
 
 ```
