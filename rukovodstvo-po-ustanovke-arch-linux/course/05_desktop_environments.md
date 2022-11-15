@@ -19,7 +19,7 @@ sudo systemctl start sddm
 ## Установка используемых мною программ
 
 ```
-paru -S google-chrome mpv discord telegram-desktop visual-studio-code-bin ark
+paru -S google-chrome mpv discord telegram-desktop visual-studio-code-bin ark obs-studio
 ```
 
 ## Настройка Bluetooth и звуковой карты
