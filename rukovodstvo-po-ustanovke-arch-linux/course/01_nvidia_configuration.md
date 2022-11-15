@@ -53,6 +53,15 @@ Option "Coolbits" "28"
 Option "AllowInderectGLXProtocol" "off"
 ```
 
+## Включаем поддержку nvidia\_drm
+
+```
+vim /etc/default/grub ->
+    GRUB_CMDLINE_LINUX="nvidia_drm.modeset=1" # (1)
+```
+
+1. Добавляем в аргументы GRUB-CMDLINE-LINUX nvidia-drm.modeset=1.
+
 ## Установка микрокодеков
 
 ```
