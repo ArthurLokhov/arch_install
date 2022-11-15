@@ -131,7 +131,7 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
 ```
 pacstrap /mnt base base-devel linux linux-filmware \ # (1)
     sudo vim git neofetch which zsh \ # (2)
-    dhcpcd networkmanager intel-ucode # (3)
+    networkmanager intel-ucode # (3)
 ls /mnt 
 ```
 

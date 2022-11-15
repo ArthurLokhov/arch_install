@@ -1,22 +1,44 @@
 # 🔋 Драйвера Nvidia
 
-## Установка Nvidia
+## Установка Nvidia(Для стандартного ядра)
 
 ```
 paru -S linux-headers
-paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
+paru -S nvidia nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
 sudo vim /etc/mkinitcpio.conf ->
     MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
-sudo mkinitcpio -P linux
+mkinitcpio -P linux
 cd /etc/pacman.d/hooks
-sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/etc/pacman.d/hooks/nvidia.hook" -O # (2)
+sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/nvidia/nvidia.hook" -O # (2)
 sudo nvidia-xconfig # (3)
 sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.d/20-nvidia.conf
+sudo reboot
+nvidia-smi # (4)
+sudo systemctl enable nvidia-persistenced.service # (5)
 ```
 
 1. Отредактируйте переменную MODULES. Если вы используйте BTRFS добавьте `crc32c libcrc32c zlib_deflate btrfs.`
 2. Скачайте nvidia хук.
 3. Сгенерируйте свою конфигурацию видеокарты Nvidia.
+4. Проверим, что все подключилось.
+5. Включаем сервис необходимый для работы nvidia.
+
+## Установка Nvidia(для linux\_xanmod ядра) - Мой выбор
+
+```
+paru -S linux-headers
+paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
+paru -S lib32-nvidia-utils lib32-vulkan-icd-loader lib32-opencl-nvidia
+sudo vim /etc/mkinitcpio.conf ->
+    MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+mkinitcpio -P linux
+cd /etc/pacman.d/hooks
+sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/nvidia/nvidia.hook" -O
+sudo nvidia-xconfig
+sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.d/20-nvidia.conf
+nvidia-smi
+sudo systemctl enable nvidia-persistenced.service
+```
 
 Добавим в секцию Device следующие строки:
 

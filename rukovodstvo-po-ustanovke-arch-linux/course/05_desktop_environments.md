@@ -1,84 +1,50 @@
-# 🖥 Оконное окружение
+# 🖥 Оконное окружение(KDE)
 
-## Установка X сервера
+## Установка X11(Если у вас не Nvidia берите Wayland)
 
 ```
+sudo pacman -Syuu
 paru -S xorg-server xorg-xinit
 ```
 
-## Установка Qtile
+## Установка основы для дальнейшей модификации
 
 ```
-paru -S qtile qtile-extras-git gdm rofi python-dbus-next network-manager-applet pasystray blueman bottom picom-git catppuccin-gtk-theme-mocha
+paru -S plasma sddm
+paru -S kitty dolphin
+sudo systemctl enable sddm
+sudo systemctl start sddm
 ```
 
-## Настройка Gdm
+## Удаление лишних плагинов и программ из KDE Plasma
 
 ```
-sudo vim /etc/gdm/custom.conf # (1)
-sudo systemctl enable gdm.service
+paru -R layer-shell-qt kwayland-integration plasma-sdk kwallet-pam
 ```
 
-1. Раскомментируйте `WaylandEnable=false`.
-
-## Установка полезного софта
+## Установка используемых мною программ
 
 ```
-paru -S nautilus baobab eog evince file-roller flameshot htop firefox dunst visual-studio-code-bin discord signal-desktop  
+paru -S google-chrome mpv discord telegram-desktop visual-studio-code-bin
 ```
 
-## Установка приложений от Gnome
+## Настройка Bluetooth и звуковой карты
 
 ```
-paru -S gnome-tweaks gnome-settings-daemon gnome-characters gnome-calculator gnome-disk-utility gnome-font-viewer gnome-logs gnome-keyring
+paru -S bluez bluez-utils # (1)
+paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack wireplumber pavucontrol alsa-utils # (1) 
+mkdir -p ~/.config/pipewire/media-session.d/
+cp /usr/share/pipewire/*.conf ~/.config/pipewire/ # (2)
+vim ~/.config/pipewire/pipewire.conf # (3)
+
+systemctl --user enable pipewire.service
+systemctl --user enable pipewire-pulse.service
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
 ```
 
-## Активация numlockx во время старта системы
+1. Установите нужные для работы Bluetooth и звуковой карты  библиотеки.
+2. Скопируйте стандартный конфиг.
+3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
 
-```
-paru -S numlockx
-vim ~/.xprofile ->
-    if [ -x /usr/bin/numlockx ]; then
-            /usr/bin/numlockx on
-    fi
-```
-
-## Настройка Picom
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/picom/picom.conf" >> ~/.config/picom/picom.conf
-```
-
-## Настройка Flameshot
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/flameshot/flameshot.ini" >> ~/.config/flameshot/flameshot.ini
-```
-
-## Настройка Rofi
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/rofi/config.rasi" >> ~/.config/rofi/config.rasi
-```
-
-## Настройка Dunst
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/dunst/dunstrc" >> ~/.config/dunst/dunstrc
-```
-
-## Настройка Qtile
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/config.py" >> ~/.config/qtile/config.py
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/owm.py" >> ~/.config/qtile/owm.py
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/autostart.sh" >> ~/.config/qtile/autostart.sh
-```
-
-## Перезагрузка
-
-```
-sudo reboot
-```
-
-##
+После установки требуется зайти в Настройки>Внешний вид>Стиль приложения>GNOME/GTK и настроить внешний вид GTK приложений.

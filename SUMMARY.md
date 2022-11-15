@@ -8,5 +8,5 @@
     * [📀 Настройка загрузчика Grub](rukovodstvo-po-ustanovke-arch-linux/course/03\_grub\_boot\_loader.md)
     * [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
     * [🪛 Настройка драйверов](rukovodstvo-po-ustanovke-arch-linux/course/02\_drivers.md)
-    * [🖥 Оконное окружение](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
+    * [🖥 Оконное окружение(KDE)](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
     * [🔮 Настройка Zsh](rukovodstvo-po-ustanovke-arch-linux/course/03\_zsh\_configure.md)
