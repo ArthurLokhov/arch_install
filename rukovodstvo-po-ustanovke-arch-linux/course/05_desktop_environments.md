@@ -43,38 +43,6 @@ vim ~/.xprofile ->
     fi
 ```
 
-## Настройка Picom
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/picom/picom.conf" >> ~/.config/picom/picom.conf
-```
-
-## Настройка Flameshot
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/flameshot/flameshot.ini" >> ~/.config/flameshot/flameshot.ini
-```
-
-## Настройка Rofi
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/rofi/config.rasi" >> ~/.config/rofi/config.rasi
-```
-
-## Настройка Dunst
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/dunst/dunstrc" >> ~/.config/dunst/dunstrc
-```
-
-## Настройка Qtile
-
-```
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/config.py" >> ~/.config/qtile/config.py
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/owm.py" >> ~/.config/qtile/owm.py
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.config/qtile/autostart.sh" >> ~/.config/qtile/autostart.sh
-```
-
 ## Перезагрузка
 
 ```
