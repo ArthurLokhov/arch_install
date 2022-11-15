@@ -10,7 +10,7 @@ paru -S xorg-server xorg-xinit
 ## Установка основы для дальнейшей модификации
 
 ```
-paru -S plasma sddm
+paru -S plasma sddm 
 paru -S kitty dolphin
 sudo systemctl enable sddm
 sudo systemctl start sddm
@@ -19,7 +19,7 @@ sudo systemctl start sddm
 ## Установка используемых мною программ
 
 ```
-paru -S google-chrome mpv discord telegram-desktop visual-studio-code-bin
+paru -S google-chrome mpv discord telegram-desktop visual-studio-code-bin ark
 ```
 
 ## Настройка Bluetooth и звуковой карты
@@ -43,6 +43,12 @@ sudo systemctl start bluetooth.service
 
 После установки требуется зайти в Настройки>Внешний вид>Стиль приложения>GNOME/GTK и настроить внешний вид GTK приложений.
 
+## Удаление лишних программ
+
+```
+paru -R discover plasma-sdk
+```
+
 ## Настройка внешнего вида
 
 1. Устанавливаем Sweet KDE тему. Также устанавливаем Sweet тему для GTK/Gnome приложений.
@@ -55,4 +61,13 @@ sudo systemctl start bluetooth.service
 
 1. Переходим в Windows Behavior>Desktop Effects. Включаем Wobbly Windows, но уберите галочку срабатывания данного эффекта, когда окно масштабируется.
 2. Также включаем Magic Lamp и ставим в настройках 300 миллисекунд.&#x20;
+
+## Установка Kvantum Engine
+
+```
+paru -S kvantum-qt5
+```
+
+1. Установите Sweet тему для  kvantum-qt5, а затем активируйте ее в самой программе.
+2. Перейдите в Application Style и установите kvantum-dark.
 
