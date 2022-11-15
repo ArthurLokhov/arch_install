@@ -56,6 +56,7 @@ paru -R discover plasma-sdk
 3. Меняем шрифт на JetbrainsMono Nerd Font, Regular, 11.
 4. Устанавливаем пак иконок BeautyLine.
 5. Переходим в Startup and Shutdown и ставим для экрана блокировки тему Sweet.
+6. Устанавливаем свои обои на рабочий стол.
 
 ## Настройка эффектов
 
