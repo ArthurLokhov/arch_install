@@ -24,13 +24,6 @@ grub-mkconfig -o /boot/grub/grub.cfg # (3)
 
 У некоторых не находится Windows Boot Manager. Ничего страшного, просто повторите команду grub-mkconfig после перезапуска системы.
 
-## Включаем интернет сервисы
-
-```
-systemctl enable dhcpcd.service
-systemctl enable NetworkManager.service
-```
-
 ## Перезапускаем системы
 
 ```

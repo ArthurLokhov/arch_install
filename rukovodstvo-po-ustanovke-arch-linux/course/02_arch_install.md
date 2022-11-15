@@ -112,7 +112,7 @@ mount /dev/nvme0n1p1 /mnt/efi/ # (2)
 1. Создает EFI раздел.
 2. Монтируем в папку тот раздел, на котором установлен Windows Boot Loader.
 
-## Устанавливаем самые быстрые зеркала
+## Устанавливаем самые быстрые зеркала(позже reflector)
 
 ```
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak # (1)
@@ -182,13 +182,6 @@ vim /etc/locale.conf ->
 ```
 
 1. Интерфейс будет на английском, а все остальное на русском.
-
-Можете просто скачать данный файл:
-
-```
-cd /etc/
-sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/locale.conf" -O
-```
 
 ## Настройка клавиатуры
 

@@ -24,7 +24,7 @@ sudo systemctl enable gdm.service
 ## Установка полезного софта
 
 ```
-paru -S nautilus baobab eog evince file-roller flameshot htop firefox dunst visual-studio-code-bin discord signal-desktop  
+paru -S nautilus baobab eog evince file-roller flameshot htop firefox dunst  
 ```
 
 ## Установка приложений от Gnome

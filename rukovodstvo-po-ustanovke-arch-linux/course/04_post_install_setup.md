@@ -3,13 +3,12 @@
 ## Подключаемся к Wi-Fi
 
 ```
-ping -c 3 www.google.com # (1)
-nmcli dev wifi connect <SSID> password “<password>” # (2)
-ping -c 3 www.google.com # (1)
+nmcli dev wifi connect <SSID> password “<password>” # (1)
+ping -c 3 www.google.com # (2)
 ```
 
-1. Проверяем есть ли подключение к интернету.
-2. Используем данную команду если надо подключиться к интернету с именем`<SSID>` и паролем`<password>`.
+1. Используем данную команду если надо подключиться к интернету с именем`<SSID>` и паролем`<password>`.&#x20;
+2. Проверяем есть ли подключение к интернету.
 
 ## Активируйте TRIM для SSD
 
@@ -64,19 +63,32 @@ sudo systemctl start bluetooth.service
 2. Скопируйте стандартный конфиг.
 3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
 
+## Настройка зеркал
+
+```
+sudo vim /etc/pacman.conf # (1)
+paru -Sy
+paru -S reflector rsync curl
+sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo vim /etc/pacman.d/mirrorlist # (2)
+paru -Suy
+paru -S ccache grub-customizer
+```
+
+1. Раскомментируйте блок `[multilib]`.
+
+Добавьте yandex зеркала.
+
+```
+#Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
+#Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
+```
+
 ## Настройка звуковой карты
 
 ```
 paru -S pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack wireplumber pavucontrol alsa-utils 
 ```
-
-## Настройка neofetch
-
-```
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/neofetch/config.conf' > ~/.config/neofetch/config.conf # (1)
-```
-
-1. Установите мой конфиг - neofetch.conf.
 
 ## Установка шрифтов Windows
 
@@ -97,37 +109,12 @@ fc-cache --force
 ```
 paru -S ttf-dejavu noto-fonts
 paru -S nerd-fonts-jetbrains-mono
-paru -S nerd-fonts-fira-code
 ```
 
-## Установка терминального эмулятора kitty
+## Установка моего софта
 
 ```
-paru -S kitty
-mkdir -p ~/.config/kitty
-curl -L 'https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.config/kitty/kitty.conf' > ~/.config/kitty/kitty.conf # (1)
-```
-
-1. Установите мой конфиг - kitty.conf
-
-## Настройка зеркал
-
-```
-sudo vim /etc/pacman.conf # (1)
-paru -Sy
-paru -S reflector rsync curl
-sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
-sudo vim /etc/pacman.d/mirrorlist # (2)
-paru -Suy
-paru -S ccache grub-customizer
-```
-
-1. Раскомментируйте блок `[multilib]`.
-2. Добавьте yandex зеркала.
-
-```
-#Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
-#Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
+paru -S kitty visual-studio-code-bin discord telegram-desktop firefox
 ```
 
 ## Установка кастомного ядра Xanmod

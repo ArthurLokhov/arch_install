@@ -54,7 +54,7 @@ vim ~/.zshrc ->
 
 ```
 paru -S zsh-theme-powerlevel10k
-curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/master/configs/.p10k.zsh" > ~/.p10k.zsh 
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/arch_install/main/configs/.p10k.zsh" > ~/.p10k.zsh 
 vim ~/.zshrc ->
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
     source ~/.p10k.zsh
