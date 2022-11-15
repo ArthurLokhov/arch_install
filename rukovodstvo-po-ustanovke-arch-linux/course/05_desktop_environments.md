@@ -16,12 +16,6 @@ sudo systemctl enable sddm
 sudo systemctl start sddm
 ```
 
-## Удаление лишних плагинов и программ из KDE Plasma
-
-```
-paru -R layer-shell-qt kwayland-integration plasma-sdk kwallet-pam
-```
-
 ## Установка используемых мною программ
 
 ```
@@ -48,3 +42,17 @@ sudo systemctl start bluetooth.service
 3. Модифицируйте строку в конфиге `default.clock.allowed-rates = [ 44100 48000 ]`
 
 После установки требуется зайти в Настройки>Внешний вид>Стиль приложения>GNOME/GTK и настроить внешний вид GTK приложений.
+
+## Настройка внешнего вида
+
+1. Устанавливаем Sweet KDE тему. Также устанавливаем Sweet тему для GTK/Gnome приложений.
+2. Заходим в Window Decoration>Titlebar Buttons. Убираем все иконки и переносим свернуть, на весь экран, закрыть в левый угол.
+3. Меняем шрифт на JetbrainsMono Nerd Font, Regular, 11.
+4. Устанавливаем пак иконок BeautyLine.
+5. Переходим в Startup and Shutdown и ставим для экрана блокировки тему Sweet.
+
+## Настройка эффектов
+
+1. Переходим в Windows Behavior>Desktop Effects. Включаем Wobbly Windows, но уберите галочку срабатывания данного эффекта, когда окно масштабируется.
+2. Также включаем Magic Lamp и ставим в настройках 300 миллисекунд.&#x20;
+
