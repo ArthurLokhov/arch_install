@@ -10,5 +10,5 @@
     * [🪛 Настройка драйверов](rukovodstvo-po-ustanovke-arch-linux/course/02\_drivers.md)
     * [🖥 Оконное окружение(KDE)](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
     * [🔮 Настройка Zsh](rukovodstvo-po-ustanovke-arch-linux/course/03\_zsh\_configure.md)
-    * [🕹 (Скоро) Конфигурация под игры](rukovodstvo-po-ustanovke-arch-linux/course/skoro-konfiguraciya-pod-igry.md)
     * [⌨ (Скоро) Конфигурация для разработки](rukovodstvo-po-ustanovke-arch-linux/course/skoro-konfiguraciya-dlya-razrabotki.md)
+    * [🕹 (Скоро) Конфигурация под игры](rukovodstvo-po-ustanovke-arch-linux/course/skoro-konfiguraciya-pod-igry.md)
