@@ -60,3 +60,11 @@ git clone https://aur.archlinux.org/nvidia-tweaks.git
 cd nvidia-tweaks
 makepkg -sric
 ```
+
+## Включаем поддержку nvidia\_persistenced
+
+```
+sudo reboot
+nvidia-smi # Проверяем работает ли видеокарта.
+sudo systemctl enable nvidia-persistenced.service
+```

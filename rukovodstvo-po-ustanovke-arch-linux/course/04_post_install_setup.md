@@ -16,12 +16,7 @@ ping -c 3 www.google.com # (2)
 sudo systemctl enable fstrim.timer
 ```
 
-## Включаем поддержку nvidia\_persistenced
-
-```
-nvidia-smi # Проверяем работает ли видеокарта.
-sudo systemctl enable nvidia-persistenced.service
-```
+##
 
 ## Конфигурация git
 
