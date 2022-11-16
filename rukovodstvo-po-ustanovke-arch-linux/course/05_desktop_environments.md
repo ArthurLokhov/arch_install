@@ -72,3 +72,17 @@ paru -S kvantum-qt5
 1. Установите Sweet тему для  kvantum-qt5, а затем активируйте ее в самой программе.
 2. Перейдите в Application Style и установите kvantum-dark.
 
+## Установим Latte Dock
+
+```
+paru -S kdecoration plasma5-applets-window-buttons latte-dock
+```
+
+1. Скачиваем новые виджеты window buttons applet, window title.
+2. Запускаем Latte Dock и настраиваем его под себя. Откючаем панель от kde plasma.
+3. Добавляем в Application Launcher виджет Global Menu.&#x20;
+
+## Устанавливаем Kwin скрипты
+
+1. Первый скрипт, который надо установить называется Hide Title.
+
