@@ -49,7 +49,6 @@ mkdir ~/Workflow
 ```
 cd ~/Downloads
 git clone https://github.com/ArthurLokhov/dots.git
-mv ~/Downloads/dots/* ~/
 ```
 
 ## Установка Paru
