@@ -5,6 +5,7 @@
 ```
 paru -S linux-headers
 paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
+paru -S lib32-nvidia-utils lib32-opencl-nvidia lib32-vulkan-icd-loader
 sudo vim /etc/mkinitcpio.conf ->
     MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
 sudo mkinitcpio -P linux
