@@ -3,9 +3,10 @@
 ## 🐧 Arch Hero
 
 * [❤ Что такое Arch Hero?](README.md)
-* [🏁 Начало пути...](arch-hero/nachalo-puti.../README.md)
-  * [1⃣ Установка](arch-hero/nachalo-puti.../ustanovka.md)
-* [Драйвера](arch-hero/draivera.md)
+* [🏁 Начало пути...](arch-hero/nachalo-puti....md)
+* [💿 Установка](arch-hero/ustanovka/README.md)
+  * [1⃣ Первые шаги](arch-hero/ustanovka/pervye-shagi.md)
+* [🔌 Драйвера](arch-hero/draivera.md)
 
 ***
 
