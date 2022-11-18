@@ -3,7 +3,7 @@
 ## 🐧 Arch Hero
 
 * [Что такое Arch Hero?](README.md)
-* [Начало пути. Установка Arch Linux](arch-hero/nachalo-puti.-ustanovka-arch-linux.md)
+* [Начало пути...](arch-hero/nachalo-puti....md)
 
 ***
 
