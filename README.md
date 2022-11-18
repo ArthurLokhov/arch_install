@@ -1,5 +1,5 @@
 ---
-description: Arch Hero это мануал по детальной настройка дистрибутива Arch Linux.
+description: Arch Hero это мануал по детальной настройке дистрибутива Arch Linux.
 ---
 
 # Что такое Arch Hero?
