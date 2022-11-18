@@ -1,6 +1,13 @@
 # Table of contents
 
-* [💿 Руководство по установке Arch Linux](README.md)
+## 🐧 Arch Hero
+
+* [Что такое Arch Hero?](README.md)
+* [Начало пути. Установка Arch Linux](arch-hero/nachalo-puti.-ustanovka-arch-linux.md)
+
+***
+
+* [💿 Руководство по установке Arch Linux](<README (1).md>)
   * [📗 Заглавие](rukovodstvo-po-ustanovke-arch-linux/course/README.md)
     * [🔌 Предварительная настройка](rukovodstvo-po-ustanovke-arch-linux/course/01\_presetup.md)
     * [⚙ Базовая установка Arch Linux](rukovodstvo-po-ustanovke-arch-linux/course/02\_arch\_install.md)
