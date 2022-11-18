@@ -6,6 +6,7 @@
 * [🏁 Начало пути...](arch-hero/nachalo-puti....md)
 * [💿 Установка](arch-hero/ustanovka/README.md)
   * [1⃣ Первые шаги](arch-hero/ustanovka/pervye-shagi.md)
+  * [2⃣ Разметка диска](arch-hero/ustanovka/razmetka-diska.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 
 ***
