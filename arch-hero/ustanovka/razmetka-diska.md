@@ -38,4 +38,37 @@ cfdisk /dev/<disk> # В моем случае команда выглядит т
 
 ## Монтируем разделы
 
+Перед монтированием разделов, надо их отформатировать в поддерживаемый ядром линукса формат. В данном случае ext4 для разделом под root и home, а также swap под swap раздел.&#x20;
+
+Ниже представлены наименования моих разделов, замените их на свои разделы.
+
+```shell
+mkfs.ext4 /dev/nvme0n1p5
+mkfs.ext4 /dev/nvme0n1p6
+mkswap /dev/nvme0n1p7
+```
+
+Теперь займемся самим монтированием разделов.
+
+```shell
+mount /dev/nvme0n1p5 /mnt
+mkdir /mnt/home
+mount /dev/nvme0n1p6 /mnt/home
+swapon /dev/nvme0n1p7s
+```
+
+Также создадим раздел куда в последствии поставим загрузчик нашей системы.
+
+```shell
+mkdir /mnt/efi
+```
+
 ## Если у вас Windows...
+
+Стоит смонтировать в наш раздел с загрузчиком другой раздел, на котором расположен Windows Boot Loader. Напоминаю, какой раздел за что отвечает можно было увидеть с помощью команды fdisk.
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>EFI System, то что мне нужно</p></figcaption></figure>
+
+```shell
+mount /dev/nvme0n1p1 /mnt/efi
+```
