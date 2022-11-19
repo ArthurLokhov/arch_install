@@ -7,6 +7,7 @@
 * [💿 Установка](arch-hero/ustanovka/README.md)
   * [1⃣ Первые шаги](arch-hero/ustanovka/pervye-shagi.md)
   * [2⃣ Разметка диска](arch-hero/ustanovka/razmetka-diska.md)
+  * [3⃣ Установка ядра](arch-hero/ustanovka/ustanovka-yadra.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 
 ***
