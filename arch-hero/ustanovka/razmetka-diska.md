@@ -28,11 +28,11 @@ cfdisk /dev/<disk> # В моем случае команда выглядит т
 
 Первый столбец - оперативная память, а второй - файл подкачки.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Соотношение RAM к Swap</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Соотношение RAM к Swap</p></figcaption></figure>
 
 В итоге получится что-то похожее. В моем случае у меня еще стоит Windows(все руки не дойдут её снести), поэтому у меня не 3, а 7 разделов.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>cfdisk - моя разметка</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>cfdisk - моя разметка</p></figcaption></figure>
 
 Далее выбираем "**Write**", пишем "**yes**". И выходим выбирая "**Quit**".
 
@@ -67,7 +67,7 @@ mkdir /mnt/efi
 
 Стоит смонтировать в наш раздел с загрузчиком другой раздел, на котором расположен Windows Boot Loader. Напоминаю, какой раздел за что отвечает можно было увидеть с помощью команды _**fdisk**_.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>EFI System, то что мне нужно</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>EFI System, то что мне нужно</p></figcaption></figure>
 
 ```shell
 mount /dev/nvme0n1p1 /mnt/efi
