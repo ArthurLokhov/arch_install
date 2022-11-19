@@ -23,5 +23,4 @@
   * [📗 Заглавие](rukovodstvo-po-ustanovke-arch-linux/course/README.md)
     * [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
     * [🔋 Драйвера Nvidia](rukovodstvo-po-ustanovke-arch-linux/course/01\_nvidia\_configuration.md)
-    * [🪛 Настройка драйверов](rukovodstvo-po-ustanovke-arch-linux/course/02\_drivers.md)
     * [🔮 Настройка Zsh](rukovodstvo-po-ustanovke-arch-linux/course/03\_zsh\_configure.md)
