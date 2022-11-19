@@ -12,7 +12,7 @@ description: Последний рывок
 pacman -S grub grub-customizer ccache efibootmgr
 ```
 
-Если вы используете Dual Boot, то установите _**os-prober**_, а также разрешите его использование расскоментировав строчки "**GRUB\_DISABLE\_OS\_PROBER=false**" в файле _**/etc/default/grub**_.
+Если вы используете Dual Boot, то установите _**os-prober**_, а также разрешите его использование расскоментировав строчки "**GRUB\_DISABLE\_OS\_PROBER=false**" в файле _/etc/default/grub_.
 
 ```shell
 pacman -S os-prober

@@ -31,9 +31,14 @@ pacman -R discover plasma-sdk
 pacman -S dolphin kitty 
 ```
 
-Теперь мы может запускаться.
+Теперь мы можем включить _**sddm**_.
 
 ```shell
 sudo systemctl enable sddm
-sudo systemctl start sddm
+```
+
+Перезапускаем компьютер.
+
+```shell
+sudo reboot
 ```

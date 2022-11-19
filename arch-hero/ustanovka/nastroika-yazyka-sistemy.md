@@ -28,7 +28,7 @@ sudo echo "KEYMAP=ru" >> /etc/vconsole.conf
 
 ## Генерируем языковые локали
 
-Откроем файл _**/etc/locale.gen**_ и расскоментируем строчки с нужными нам локалями. Затем выполним команду _**locale-gen**_. Выбираем _**en\_US.UTF\_8**_ и **ru\_RU.UTF-8**, если у вас русская раскладка.
+Откроем файл _/etc/locale.gen_ и расскоментируем строчки с нужными нам локалями. Затем выполним команду _**locale-gen**_. Выбираем _**en\_US.UTF\_8**_ и **ru\_RU.UTF-8**, если у вас русская раскладка.
 
 ```shell
 vim /etc/locale.gen
@@ -49,7 +49,7 @@ curl -L 'https://raw.githubcontentuser.com/ArthurLokhov/dots/main/etc/locale.con
 
 ## Устаналиваем временную зону
 
-Замените _**Europe/Moscow**_ на свой часовой пояс.
+Замените _Europe/Moscow_ на свой часовой пояс.
 
 ```shell
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
