@@ -10,6 +10,45 @@ loadkeys /usr/share/kbd/keymaps/i386/qwerty/ru.map.gz# (2)
 1. Выводит список всех возможных раскладок типа qwerty.
 2. Устанавливаем  нашу раскладку. Я выбрал раскладку с поддержкой русского языка.
 
+## Устанавливаем самые быстрые зеркала(позже reflector)
+
+```
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak # (1)
+pacman -Sy # (2) 
+pacman -S pacman-contrib # (3)
+rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist # (4)
+```
+
+1. Создаем backup файла mirrorlist.
+2. Обновляем список доступных пакетов.
+3. Устанавливаем вспомогательные скрипты для pacman.
+4. Эта команда установит 10 самых быстрых зеркал и запишет их в файл mirrorlist.
+
+## Установка ядра linux
+
+```
+pacstrap /mnt base base-devel linux linux-filmware \ # (1)
+    sudo vim git neofetch which zsh \ # (2)
+    networkmanager intel-ucode # (3)
+ls /mnt 
+```
+
+1. Устанавливаем основные  зависимости.
+2. Must-Have утилиты.
+3. Драйвера. Замените`intel-ucode` на `amd-ucode`, если вы используете AMD.
+
+## Генерируем File System Table
+
+```
+genfstab -U /mnt >> /mnt/etc/fstab # Generate File System Table
+```
+
+## Заходим в установленную систему
+
+```
+arch-chroot /mnt
+```
+
 ## Генерируем локали
 
 ```
