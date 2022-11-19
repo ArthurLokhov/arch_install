@@ -12,8 +12,9 @@
   * [5⃣ Немножко настроек](arch-hero/ustanovka/nemnozhko-nastroek.md)
   * [6⃣ Загрузчик Grub](arch-hero/ustanovka/zagruzchik-grub.md)
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
-  * [1⃣ KDE](arch-hero/okonnye-okruzheniya/05\_desktop\_environments.md)
+  * [1⃣ KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
   * [2⃣ Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
+  * [Page 1](arch-hero/okonnye-okruzheniya/page-1.md)
 * [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 

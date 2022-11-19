@@ -9,3 +9,9 @@ description: Все должно быть идеально!
 {% hint style="info" %}
 Все, что я делаю в этом блоке не является строго обязательным. Вы можете пропустить этот блок или вернуться к нему позже.
 {% endhint %}
+
+## Установка используемых мною программ
+
+```
+paru -S google-chrome flameshot mpv discord telegram-desktop visual-studio-code-bin ark obs-studio
+```
