@@ -2,7 +2,7 @@
 description: What language are you a native speaker of?
 ---
 
-# Настройка языка системы
+# 4⃣ Настройка языка системы
 
 ## Устанавливаем раскладку клавиатуры
 
@@ -40,4 +40,12 @@ curl -L 'https://raw.githubcontentuser.com/ArthurLokhov/dots/main/etc/locale.con
 {% hint style="info" %}
 Если вас это не устраивает и вы хотите русский интерфейс, то замените значения LANG и LC\_MESSAGES на ru\_RU.UTF-8.&#x20;
 {% endhint %}
+
+## Устаналиваем временную зону
+
+Замените /Europe/Moscow на свой часовой пояс.
+
+```shell
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+```
 
