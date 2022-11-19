@@ -16,7 +16,8 @@
   * [2⃣ Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 * [🔋 Nvidia](arch-hero/nvidia.md)
-* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
+* [⚙ Полировка системы](arch-hero/polirovka-sistemy/README.md)
+  * [1⃣ Ускорение pacman](arch-hero/polirovka-sistemy/uskorenie-pacman.md)
 
 ***
 
