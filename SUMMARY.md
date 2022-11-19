@@ -14,13 +14,14 @@
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
   * [1⃣ KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
   * [2⃣ Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
-* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
+* [🔋 Nvidia](arch-hero/nvidia.md)
+* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
 
 ***
 
 * [💿 Руководство по установке Arch Linux](<README (1).md>)
+  * [🔋 Nvidia](rukovodstvo-po-ustanovke-arch-linux/01\_nvidia\_configuration.md)
   * [📗 Заглавие](rukovodstvo-po-ustanovke-arch-linux/course/README.md)
     * [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
-    * [🔋 Драйвера Nvidia](rukovodstvo-po-ustanovke-arch-linux/course/01\_nvidia\_configuration.md)
     * [🔮 Настройка Zsh](rukovodstvo-po-ustanovke-arch-linux/course/03\_zsh\_configure.md)
