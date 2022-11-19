@@ -85,3 +85,11 @@ fc-cache --force
 paru -S ttf-dejavu noto-fonts
 paru -S nerd-fonts-jetbrains-mono
 ```
+
+## Удаление остаточных файлов, мусора
+
+```
+paru -Syy
+paru -Scc
+paru -Suu
+```

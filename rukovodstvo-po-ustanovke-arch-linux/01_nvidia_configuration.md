@@ -1,18 +1,6 @@
 # 🔋 Nvidia
 
-{% hint style="success" %}
-Советую использовать пакетный помощник _**paru**_. Как его установить было показано в пункте "**Полировка системы**".
-{% endhint %}
-
-## Установка Nvidia
-
 ```
-paru -S linux-headers
-paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
-paru -S lib32-nvidia-utils lib32-opencl-nvidia lib32-vulkan-icd-loader
-sudo vim /etc/mkinitcpio.conf ->
-    MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm) # (1)
-sudo mkinitcpio -P linux
 cd /etc/pacman.d/hooks
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/etc/pacman.d/hooks/nvidia.hook" -O # (2)
 sudo nvidia-xconfig # (3)
