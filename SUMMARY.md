@@ -11,6 +11,9 @@
   * [4⃣ Настройка языка системы](arch-hero/ustanovka/nastroika-yazyka-sistemy.md)
   * [5⃣ Немножко настроек](arch-hero/ustanovka/nemnozhko-nastroek.md)
   * [6⃣ Загрузчик Grub](arch-hero/ustanovka/zagruzchik-grub.md)
+* [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
+  * [1⃣ KDE](arch-hero/okonnye-okruzheniya/05\_desktop\_environments.md)
+  * [2⃣ Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
 * [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 
@@ -21,5 +24,4 @@
     * [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
     * [🔋 Драйвера Nvidia](rukovodstvo-po-ustanovke-arch-linux/course/01\_nvidia\_configuration.md)
     * [🪛 Настройка драйверов](rukovodstvo-po-ustanovke-arch-linux/course/02\_drivers.md)
-    * [🖥 Оконное окружение(KDE)](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
     * [🔮 Настройка Zsh](rukovodstvo-po-ustanovke-arch-linux/course/03\_zsh\_configure.md)
