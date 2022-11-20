@@ -22,6 +22,6 @@ makepkg -si
 
 Откроем файл _/etc/paru.conf_ и расскомментируем опции **CombinedUpgrade**, **Upgrade Menu**, **NewsOnUpgrade**. А также добавим опцию **SkipReview**. В итоге это должно выглядить так.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Блок [options] в файле /etc/paru.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Блок [options] в файле /etc/paru.conf</p></figcaption></figure>
 
 Затем откроем файл _/etc/pacman.conf_ и расскомментируем опцию **Color**.
