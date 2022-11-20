@@ -12,15 +12,15 @@ paru -S nerd-fonts-jetbrains-mono
 Сначала создадим раздел и смонтируем туда раздел с Windows. Вместо _**\<your\_windows\_partition>**_ введите раздел с установленной Windows, зачастую это третий раздел.
 
 ```shell
-sudo mkdir /mnt/win1011
-sudo ntfs-3g <your_windows_partition> /mnt/win1011
+sudo mkdir /mnt/windows
+sudo ntfs-3g <your_windows_partition> /mnt/windows
 ```
 
 Теперь скопируем шрифты.
 
 ```shell
 mkdir -p ~/Downloads/WindowsFonts
-cp /mnt/win1011/Windows/Fonts/*.tt* ~/Downloads/WindowsFonts
+cp /mnt/windows/Windows/Fonts/*.tt* ~/Downloads/WindowsFonts
 ```
 
 И установим шрифты.
