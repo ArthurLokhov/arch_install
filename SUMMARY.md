@@ -19,7 +19,10 @@
   * [Как пользоваться Pacman...](arch-hero/repozitorii/kak-polzovatsya-pacman....md)
   * [Ускорение pacman](arch-hero/repozitorii/uskorenie-pacman.md)
   * [Установка пакетного помощника](arch-hero/repozitorii/ustanovka-paketnogo-pomoshnika.md)
-* [🔌 Драйвера](arch-hero/draivera.md)
+* [🔌 Драйвера](arch-hero/draivera/README.md)
+  * [Bluetooth и звуковая карта](arch-hero/draivera/bluetooth-i-zvukovaya-karta.md)
+  * [Клавиатура](arch-hero/draivera/klaviatura.md)
+  * [TP-LINK: Wireless USB Adapter](arch-hero/draivera/tp-link-wireless-usb-adapter.md)
 * [🎮 Видеокарты](arch-hero/videokarty/README.md)
   * [AMD RADEON](arch-hero/videokarty/amd-radeon.md)
   * [NVIDIA](arch-hero/nvidia.md)
@@ -28,4 +31,4 @@
 
 ***
 
-* [🔧 Настройка Arch после установки](04\_post\_install\_setup.md)
+* [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
