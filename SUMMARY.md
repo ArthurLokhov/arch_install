@@ -20,7 +20,7 @@
 * [📦 Репозитории](arch-hero/repozitorii/README.md)
   * [Как пользоваться Pacman...](arch-hero/repozitorii/kak-polzovatsya-pacman....md)
   * [Ускорение pacman](arch-hero/repozitorii/uskorenie-pacman.md)
-  * [Установка Paru](arch-hero/repozitorii/ustanovka-paru.md)
+  * [Установка Paru](arch-hero/repozitorii/ustanovka-paketnogo-pomoshnika.md)
 * [💻 Программы](arch-hero/programmy.md)
 * [🔌 Драйвера](arch-hero/draivera/README.md)
   * [SSD](arch-hero/draivera/ssd.md)
