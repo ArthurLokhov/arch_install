@@ -65,3 +65,21 @@ MODULES=(amdgpu radeon)
 ```shell
 sudo mkinitcpio -P linux
 ```
+
+## Если вы используете X Server...
+
+Если будете использовать _**X Server**_, то создайте файл _/etc/X11/xorg.conf.d/20-amdgpu.conf_ и пропишите там следующие строчки.
+
+```shell
+Section "Device"
+     Identifier "AMD"
+     Driver "amdgpu"
+EndSection
+```
+
+Надо дать знать нашему загрузчика, что у нас изменилась конфигурация устройства.
+
+```shell
+sudo mkinitcpio -P
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
