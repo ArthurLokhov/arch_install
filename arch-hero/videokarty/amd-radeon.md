@@ -38,10 +38,16 @@ paru -S xf86-video-amdgpu
 
 Для начала надо узнать к какой серии принадлежит видеокарта  _**Southern Islands(SI)**_ или _**Sea Islands(CIK).**_&#x20;
 
-Затем надо в файле _/etc/default/grub_ изменить переменную "**GRUB\_CMDLINE\_LINUX**". Ниже приведен пример для _**Sea Islands**_, если у вас _**Southern Islands**_, то вместо _**cik**_ надо указать _**si.**_
+Затем надо в файле _/etc/default/grub_ изменить переменную "**GRUB\_CMDLINE\_LINUX**".&#x20;
 
 ```shell
 GRUB_CMDLINE_LINUX="radeon.cik_support=0 amdgpu.cik_support=1"
+```
+
+Выже приведен пример для _**Sea Islands**_, если у вас _**Southern Islands**_, то вместо _**cik**_ надо указать _**si.**_
+
+```shell
+GRUB_CMDLINE_LINUX="radeon.si_support=0 amdgpu.si_support=1"
 ```
 
 Теперь подключим необходимые нам модули в файле _/etc/mkinitcpio.conf_. Для этого добавим в переменную _**MODULES**_ модули, отвечающие за работу AMD RADEON.&#x20;
@@ -52,4 +58,10 @@ GRUB_CMDLINE_LINUX="radeon.cik_support=0 amdgpu.cik_support=1"
 
 ```
 MODULES=(amdgpu radeon)
+```
+
+Пересобираем конфигурацию системы с учетом новых изменений.
+
+```shell
+sudo mkinitcpio -P linux
 ```
