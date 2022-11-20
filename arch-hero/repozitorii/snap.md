@@ -28,8 +28,16 @@ makepkg -si
 ```shell
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
-systemctl enable --now snapd.apparmor
+sudo systemctl enable --now snapd.apparmor
 sudo reboot
+```
+
+Чтобы удалить _**Snap**_, выполните следующие команды.
+
+```shell
+sudo systemctl disable --now snapd.socket
+sudo systemctl disable --now snapd.apparmor
+paru -R snapd
 ```
 
 ## Команды
