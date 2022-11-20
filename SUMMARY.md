@@ -14,12 +14,12 @@
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
   * [1 KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
   * [2 Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
+* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
+  * [Ускорение pacman](arch-hero/polirovka-sistemy/uskorenie-pacman.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 * [🎮 Видеокарты](arch-hero/videokarty/README.md)
   * [📕 AMD RADEON](arch-hero/videokarty/amd-radeon.md)
   * [📗 NVIDIA](arch-hero/nvidia.md)
-* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
-  * [Ускорение pacman](arch-hero/polirovka-sistemy/uskorenie-pacman.md)
 
 ***
 
