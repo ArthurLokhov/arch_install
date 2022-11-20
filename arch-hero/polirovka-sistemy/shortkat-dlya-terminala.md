@@ -12,7 +12,7 @@
 
 Открываем настройки и переходим в _**Keyboard**_.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://www.youtube.com/@PLAFON20">Автор скриншота - Plafon</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (3).png" alt=""><figcaption><p><a href="https://www.youtube.com/@PLAFON20">Автор скриншота - Plafon</a></p></figcaption></figure>
 
 Задаем имя нашего терминального эмулятора, команду с помощью которой открывается терминальный эмулятор(для меня эта команда kitty), а также сам "шорткат".
 

@@ -4,7 +4,7 @@ description: Магазин Snap приложений от Canonical
 
 # Snap
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://snapcraft.io/store">Snapcraft.io</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://snapcraft.io/store">Snapcraft.io</a></p></figcaption></figure>
 
 {% hint style="info" %}
 _**Snap**_ — это приложения, упакованные со всеми их зависимостями для запуска во всех популярных дистрибутивах Linux из одной сборки. Они обновляются автоматически и изящно откатываются.
