@@ -4,8 +4,14 @@ description: Магазин Snap приложений от Canonical
 
 # Snap
 
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p><a href="https://snapcraft.io/store">Snapcraft.io</a></p></figcaption></figure>
+
 {% hint style="info" %}
 _**Snap**_ — это приложения, упакованные со всеми их зависимостями для запуска во всех популярных дистрибутивах Linux из одной сборки. Они обновляются автоматически и изящно откатываются.
+{% endhint %}
+
+{% hint style="warning" %}
+Если вы выбираете между _**Snap**_ и _**Flathub**_, то лучше выбрать _**Flathub**_.
 {% endhint %}
 
 Чтобы установить Snap введите следующие команды.
@@ -51,9 +57,3 @@ snap list
 ```shell
 snap find название_пакета
 ```
-
-Больше информации можно найти здесь.
-
-{% embed url="https://wiki.archlinux.org/title/Snap_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" %}
-Snap - Arch Wiki
-{% endembed %}
