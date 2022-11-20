@@ -17,7 +17,7 @@
 * [🔌 Драйвера](arch-hero/draivera.md)
 * [🎮 Видеокарты](arch-hero/videokarty/README.md)
   * [📕 AMD RADEON](arch-hero/videokarty/amd-radeon.md)
-  * [📗 NVIDIA](arch-hero/videokarty/nvidia.md)
+  * [📗 NVIDIA](arch-hero/nvidia.md)
 * [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
   * [Ускорение pacman](arch-hero/polirovka-sistemy/uskorenie-pacman.md)
 
