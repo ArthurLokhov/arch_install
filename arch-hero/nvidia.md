@@ -5,10 +5,10 @@ description: Сторона зеленых
 # NVIDIA
 
 {% hint style="danger" %}
-**ВАЖНО**: В данный момент не подходит для работы с _**Wayland**_. Выбирайте _**X Server**_ в качестве оконного сервера.&#x20;
+**ВАЖНО**: В данный момент не подходит для работы с Wayland.&#x20;
 {% endhint %}
 
-## Установка NVIDIA
+## Установка Nvidia
 
 Для начала установим пакет с заголовочными файлами linux ядра.
 
@@ -16,10 +16,16 @@ description: Сторона зеленых
 paru -S linux-headers
 ```
 
-Теперь установим пакеты, необходимые для работы NVIDIA.
+Теперь установим пакеты, необходимые для работы драйверов Nvidia.
 
 ```shell
-paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader libglvnd libvdpau libxnvctrl
+paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia
+```
+
+А также дополнительные пакеты для работы с графикой.
+
+```shell
+paru -S vulkan-icd-loader libglvnd libvdpau libxnvctrl
 ```
 
 Некоторые программы до сих пор работают в 32-бита. Для таких программ поставим 32-битные версии пакетов.
@@ -28,17 +34,9 @@ paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader
 paru -S lib32-nvidia-utils lib32-opencl-nvidia lib32-vulkan-icd-loader
 ```
 
-{% hint style="warning" %}
-Если у вас старая видеокарта Nvidia 390, то установите пакеты, которые указаны ниже.
-{% endhint %}
+## Настраиваем систему
 
-```shell
-paru -S nvidia-390xx nvidia-390xx-settings nvidia-390xx-utils lib32-nvidia-390xx-utils lib32-opencl-nvidia-390xx opencl-nvidia-390xx libvdpau libxnvctrl-390xx vulkan-icd-loader lib32-vulkan-icd-loader
-```
-
-## Настройка системы
-
-Самое важное это в файле _/etc/mkinitcpio.conf_ в переменную _**MODULES**_ добавить модули, связанные с NVIDIA.
+Самое важное это в файле _/etc/mkinitcpio.conf_ в переменную _**MODULES**_ добавить модули, связанные с Nvidia.
 
 ```shell
 MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
@@ -56,16 +54,16 @@ GRUB_CMDLINE_LINUX="nvidia_drm.modeset=1"
 sudo mkinitcpio -P linux
 ```
 
-## Настройка NVIDIA
+## Настраиваем Nvidia
 
-Первым делом скачайте мой файл _/etc/pacman.d/hooks/nvidia.hook_. Данный файл нужен, чтобы в дальнейшем драйвера NVIDIA обновлялись через pacman.&#x20;
+Первым делом скачайте мой файл _/etc/pacman.d/hooks/nvidia.hook_. Данный файл нужен, чтобы в дальнейшем драйвера Nvidia обновлялись через pacman.&#x20;
 
 ```shell
 mkdir /etc/pacman.d/hooks
 sudo curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/etc/pacman.d/hooks/nvidia.hook" > /etc/pacman.d/hooks/nvidia.hook
 ```
 
-Теперь сгенерируем конфиг, который будет описывать нашу конфигурацию. Данный файл нужен для работы _**X Server**_ с NVIDIA. Для этого воспользуемся утилитой _**nvidia-xconfig**_.&#x20;
+Теперь сгенерируем конфиг, который будет описывать нашу конфигурацию. Данный файл нужен для работы _**X Server**_ с Nvidia. Для этого воспользуемся утилитой _**nvidia-xconfig**_.&#x20;
 
 ```shell
 sudo nvidia-xconfig
@@ -79,7 +77,7 @@ sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.d/20-nvidia.conf
 
 ## Необязательные настройки
 
-Можно установить _**nvidia-tweaks**_, чтобы модифицировать приложение "**NVIDIA Settings**" и добавить туда новые настройки.
+Можно установить _**nvidia-tweaks**_, чтобы модифицировать приложение "**Nvidia Settings**" и добавить туда новые настройки.
 
 ```shell
 cd ~/Downloads
