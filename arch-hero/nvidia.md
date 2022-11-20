@@ -5,7 +5,7 @@ description: Сторона зеленых
 # NVIDIA
 
 {% hint style="danger" %}
-**ВАЖНО**: В данный момент не подходит для работы с _**Wayland**_. Выбирайте _**X Server**_ в качестве оконного сервера.&#x20;
+**ВАЖНО**: В данный момент не подходит для работы с Wayland.&#x20;
 {% endhint %}
 
 ## Установка Nvidia
@@ -34,7 +34,7 @@ paru -S vulkan-icd-loader libglvnd libvdpau libxnvctrl
 paru -S lib32-nvidia-utils lib32-opencl-nvidia lib32-vulkan-icd-loader
 ```
 
-## Настройка системы
+## Настраиваем систему
 
 Самое важное это в файле _/etc/mkinitcpio.conf_ в переменную _**MODULES**_ добавить модули, связанные с Nvidia.
 
@@ -54,7 +54,7 @@ GRUB_CMDLINE_LINUX="nvidia_drm.modeset=1"
 sudo mkinitcpio -P linux
 ```
 
-## Настройка Nvidia
+## Настраиваем Nvidia
 
 Первым делом скачайте мой файл _/etc/pacman.d/hooks/nvidia.hook_. Данный файл нужен, чтобы в дальнейшем драйвера Nvidia обновлялись через pacman.&#x20;
 
