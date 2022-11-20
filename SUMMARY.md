@@ -14,12 +14,16 @@
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
   * [KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
   * [Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
-* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
+* [⚙ Полировка системы](arch-hero/polirovka-sistemy/README.md)
+  * [Создание папок пользователя](arch-hero/polirovka-sistemy/sozdanie-papok-polzovatelya.md)
+  * [Установка шрифтов](arch-hero/polirovka-sistemy/ustanovka-shriftov.md)
 * [📦 Репозитории](arch-hero/repozitorii/README.md)
   * [Как пользоваться Pacman...](arch-hero/repozitorii/kak-polzovatsya-pacman....md)
   * [Ускорение pacman](arch-hero/repozitorii/uskorenie-pacman.md)
   * [Установка пакетного помощника](arch-hero/repozitorii/ustanovka-paketnogo-pomoshnika.md)
+* [💻 Программы](arch-hero/programmy.md)
 * [🔌 Драйвера](arch-hero/draivera/README.md)
+  * [SSD](arch-hero/draivera/ssd.md)
   * [Bluetooth и звуковая карта](arch-hero/draivera/bluetooth-i-zvukovaya-karta.md)
   * [Клавиатура](arch-hero/draivera/klaviatura.md)
   * [TP-LINK: Wireless USB Adapter](arch-hero/draivera/tp-link-wireless-usb-adapter.md)
@@ -28,8 +32,5 @@
   * [NVIDIA](arch-hero/nvidia.md)
 * [⌨ Терминал](arch-hero/terminal/README.md)
   * [Kitty](arch-hero/terminal/kitty.md)
+  * [Git](arch-hero/terminal/git.md)
   * [Zsh](arch-hero/terminal/zsh.md)
-
-***
-
-* [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
