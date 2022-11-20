@@ -28,7 +28,4 @@
 
 ***
 
-* [💿 Руководство по установке Arch Linux](<README (1).md>)
-  * [📗 Заглавие](rukovodstvo-po-ustanovke-arch-linux/course/README.md)
-    * [🔧 Настройка Arch после установки](rukovodstvo-po-ustanovke-arch-linux/course/04\_post\_install\_setup.md)
-    * [🔮 Настройка Zsh](rukovodstvo-po-ustanovke-arch-linux/course/03\_zsh\_configure.md)
+* [🔧 Настройка Arch после установки](04\_post\_install\_setup.md)
