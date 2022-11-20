@@ -4,7 +4,7 @@
 
 Открываем настройки и переходим в Shortcuts.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Вкладка Shortcuts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Вкладка Shortcuts</p></figcaption></figure>
 
 Нажимаем "**Add Application**" и ищем наш терминальный эмулятор. Затем нажимаем на Custom Shortcuts и когда появится надпись "**Input...**" нажимаем нужный нам "шорткат".
 

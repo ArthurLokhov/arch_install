@@ -26,7 +26,7 @@ passwd <user_name>
 
 И самое важное: нужно открыть файл _**visudo**_ и расскоментировать следующую строчку:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Нужная строчка</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Нужная строчка</p></figcaption></figure>
 
 Чтобы открыть файл _**visudo**_, введем данную команду.
 
