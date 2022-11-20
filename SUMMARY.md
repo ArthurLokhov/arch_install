@@ -23,6 +23,8 @@
 * [🎮 Видеокарты](arch-hero/videokarty/README.md)
   * [AMD RADEON](arch-hero/videokarty/amd-radeon.md)
   * [NVIDIA](arch-hero/nvidia.md)
+* [⌨ Терминал](arch-hero/terminal/README.md)
+  * [Zsh](arch-hero/terminal/zsh.md)
 
 ***
 
