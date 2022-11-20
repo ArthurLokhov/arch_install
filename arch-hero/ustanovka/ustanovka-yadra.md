@@ -56,7 +56,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 Выглядит этот файл примерно вот так:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Мой файл /mnt/etc/fstab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption><p>Мой файл /mnt/etc/fstab</p></figcaption></figure>
 
 Наконец после установки системы и создания файла _/mnt/etc/fstab_, можно войти в нашу систему.
 

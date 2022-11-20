@@ -22,6 +22,7 @@ makepkg -si
 ```shell
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
+systemctl enable --now snapd.apparmor
 sudo reboot
 ```
 

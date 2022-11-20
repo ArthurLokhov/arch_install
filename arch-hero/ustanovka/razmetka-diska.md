@@ -32,7 +32,7 @@ cfdisk /dev/<disk> # В моем случае команда выглядит т
 
 В итоге получится что-то похожее. В моем случае у меня еще стоит Windows(все руки не дойдут её снести), поэтому у меня не 3, а 7 разделов.
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>cfdisk - моя разметка</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>cfdisk - моя разметка</p></figcaption></figure>
 
 Далее выбираем "**Write**", пишем "**yes**". И выходим выбирая "**Quit**".
 
