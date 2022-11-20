@@ -12,6 +12,7 @@
   * [5⃣ Немножко настроек](arch-hero/ustanovka/nemnozhko-nastroek.md)
   * [6⃣ Загрузчик Grub](arch-hero/ustanovka/zagruzchik-grub.md)
 * [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
+  * ["Шорткат" для терминала](arch-hero/polirovka-sistemy/shortkat-dlya-terminala.md)
   * [Создание папок пользователя](arch-hero/polirovka-sistemy/sozdanie-papok-polzovatelya.md)
   * [Установка шрифтов](arch-hero/polirovka-sistemy/ustanovka-shriftov.md)
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
