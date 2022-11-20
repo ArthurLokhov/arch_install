@@ -4,7 +4,7 @@ description: Магазин Flatpak приложений от Gnome
 
 # Flatpak
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p><a href="https://flatpak.org/setup/">Flatpak</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p><a href="https://flatpak.org/setup/">Flatpak</a></p></figcaption></figure>
 
 {% hint style="info" %}
 _**Flathub**_ стремится быть местом для получения и распространения приложений для Linux. Он работает на основе _**Flatpak**_ , которая позволяет запускать приложения _**Flathub**_ практически на любом дистрибутиве Linux.
