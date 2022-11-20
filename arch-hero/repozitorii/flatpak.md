@@ -2,7 +2,7 @@
 description: Магазин Flatpak приложений от Gnome
 ---
 
-# Flathub
+# Flatpak
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p><a href="https://flatpak.org/setup/">Flatpak</a></p></figcaption></figure>
 
@@ -34,6 +34,12 @@ sudo reboot
 
 ```shell
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+Чтобы удалить _**Flatpak**_.
+
+```shell
+paru -Rs flatpak
 ```
 
 ## Команды
