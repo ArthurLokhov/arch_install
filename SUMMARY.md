@@ -22,7 +22,7 @@
   * [Как пользоваться Pacman...](arch-hero/repozitorii/kak-polzovatsya-pacman....md)
   * [Ускорение pacman](arch-hero/repozitorii/uskorenie-pacman.md)
   * [Установка Paru](arch-hero/repozitorii/ustanovka-paketnogo-pomoshnika.md)
-  * [Flathub](arch-hero/repozitorii/flathub.md)
+  * [Flatpak](arch-hero/repozitorii/flatpak.md)
   * [Snap](arch-hero/repozitorii/snap.md)
 * [💻 Программы](arch-hero/programmy/README.md)
   * [Telegram](arch-hero/programmy/telegram.md)
