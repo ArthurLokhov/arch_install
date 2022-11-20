@@ -26,6 +26,12 @@ systemctl enable --now snapd.apparmor
 sudo reboot
 ```
 
+Установим _**Snap Store**_.
+
+```shell
+sudo snap install snap-store 
+```
+
 ## Команды
 
 Чтобы установить программу.
