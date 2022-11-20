@@ -30,11 +30,3 @@ Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
 ```shell
 pacman -Suy
 ```
-
-Также можно удалить остаточный мусор.
-
-```shell
-pacman -Syy
-pacman -Scc
-pacman -Suu
-```
