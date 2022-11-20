@@ -1,3 +1,7 @@
+---
+description: Текстовый редактор с открытым исходным кодом
+---
+
 # Visual Studio Code
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
