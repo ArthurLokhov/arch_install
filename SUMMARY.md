@@ -12,14 +12,17 @@
   * [5⃣ Немножко настроек](arch-hero/ustanovka/nemnozhko-nastroek.md)
   * [6⃣ Загрузчик Grub](arch-hero/ustanovka/zagruzchik-grub.md)
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
-  * [1 KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
-  * [2 Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
+  * [KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
+  * [Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
 * [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
-  * [Ускорение pacman](arch-hero/polirovka-sistemy/uskorenie-pacman.md)
+* [📦 Репозитории](arch-hero/repozitorii/README.md)
+  * [Как пользоваться Pacman...](arch-hero/repozitorii/kak-polzovatsya-pacman....md)
+  * [Ускорение pacman](arch-hero/repozitorii/uskorenie-pacman.md)
+  * [Установка пакетного помощника](arch-hero/repozitorii/ustanovka-paketnogo-pomoshnika.md)
 * [🔌 Драйвера](arch-hero/draivera.md)
 * [🎮 Видеокарты](arch-hero/videokarty/README.md)
-  * [📕 AMD RADEON](arch-hero/videokarty/amd-radeon.md)
-  * [📗 NVIDIA](arch-hero/nvidia.md)
+  * [AMD RADEON](arch-hero/videokarty/amd-radeon.md)
+  * [NVIDIA](arch-hero/nvidia.md)
 
 ***
 

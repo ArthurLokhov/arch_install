@@ -2,5 +2,5 @@
 description: Сторона красных
 ---
 
-# 📕 AMD RADEON
+# AMD RADEON
 
