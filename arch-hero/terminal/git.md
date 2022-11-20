@@ -1,13 +1,18 @@
 # Git
 
+Для того, чтобы начать работать с Git, нам потребуется дать ему знать кто мы такие. Вместо _**\<email>**_ укажите email своего GitHub аккаунта, вместо _**\<name>**_ укажие имя своего GitHub пользователя.
 
-
-## Конфигурация git
-
-```
-git config --global user.email "<email>" # (1)
-git config --global user.name "<name>" # (2)
+```shell
+git config --global user.email "<email>"
+git config --global user.name "<name>"
 ```
 
-1. Укажите свой email вместо`<email>`.
-2. Укажите свое имя пользователя вместо `<name>`.
+Теперь настроим SSH для более удобной работы с GitHub. Сначала сгенерируем SSH ключи.
+
+```shell
+paru -S openssh
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+```
+
+Далее переходим в настройка GitHub аккаунта и там находим пункт "**SSH and GPG keys**". Затем нажимаем на "**New SSH key**" и вводим свой публичный ssh ключ, который мы сгенерировали.

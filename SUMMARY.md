@@ -14,7 +14,7 @@
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)
   * [KDE](rukovodstvo-po-ustanovke-arch-linux/course/05\_desktop\_environments.md)
   * [Gnome](arch-hero/okonnye-okruzheniya/gnome.md)
-* [⚙ Полировка системы](arch-hero/polirovka-sistemy/README.md)
+* [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
   * [Создание папок пользователя](arch-hero/polirovka-sistemy/sozdanie-papok-polzovatelya.md)
   * [Установка шрифтов](arch-hero/polirovka-sistemy/ustanovka-shriftov.md)
 * [📦 Репозитории](arch-hero/repozitorii/README.md)
