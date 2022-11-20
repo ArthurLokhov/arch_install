@@ -24,16 +24,16 @@ _**Flatpak**_ — это утилита для развёртывания, уп�
 paru -S flatpak
 ```
 
-Также нам надо поключить _**Flathub**_ репозиторий.
-
-```shell
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
-
 После установки надо перезапустить систему.
 
 ```shell
 sudo reboot
+```
+
+Также нам надо поключить _**Flathub**_ репозиторий.
+
+```shell
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ## Команды

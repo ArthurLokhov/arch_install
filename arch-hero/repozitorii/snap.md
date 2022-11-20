@@ -35,9 +35,9 @@ sudo reboot
 Чтобы удалить _**Snap**_, выполните следующие команды.
 
 ```shell
-sudo systemctl disable --now snapd.socket
-sudo systemctl disable --now snapd.apparmor
-paru -R snapd
+sudo systemctl disable snapd.socket
+sudo systemctl disable snapd.apparmor
+paru -Rs snapd
 ```
 
 ## Команды
