@@ -1,5 +1,13 @@
 # 🔮 Настройка Zsh
 
+## Кастомизация ZSH
+
+```
+paru -S zsh-completions zsh-autosuggestions zsh-fast-syntax-highlighting fzf\
+paru -S bat exa fd
+paru -S zsh-theme-powerlevel10k
+```
+
 ## Настройка Bat
 
 ```

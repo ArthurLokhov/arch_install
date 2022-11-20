@@ -16,7 +16,7 @@ paru -S zsh-completions zsh-autosuggestions zsh-fast-syntax-highlighting zsh-the
 paru -S bat exa fd fzf
 ```
 
-Теперь скачаем конфиги для zsh и neofetch.
+Теперь скачаем конфиги для _**zsh**_, _**neofetch**_ и _**bat**_.
 
 ```shell
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/.zshrc" > ~/.zshrc
@@ -25,4 +25,7 @@ curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/.p10k.zsh" > ~
 
 mkdir ~/.config/neofetch
 curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/.config/neofetch/config.conf" > ~/.config/neofetch/config.conf
+
+mkdir ~/.config/bat
+curl -L "https://raw.githubusercontent.com/ArthurLokhov/dots/main/.config/bat/config" > ~/.config/bat/config
 ```
