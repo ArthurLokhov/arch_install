@@ -27,6 +27,7 @@
   * [AMD RADEON](arch-hero/videokarty/amd-radeon.md)
   * [NVIDIA](arch-hero/nvidia.md)
 * [⌨ Терминал](arch-hero/terminal/README.md)
+  * [Kitty](arch-hero/terminal/kitty.md)
   * [Zsh](arch-hero/terminal/zsh.md)
 
 ***
