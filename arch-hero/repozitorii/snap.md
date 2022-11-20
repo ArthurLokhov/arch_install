@@ -1,3 +1,7 @@
+---
+description: Магазин Snap приложений от Canonical
+---
+
 # Snap
 
 {% hint style="info" %}
@@ -20,14 +24,6 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 systemctl enable --now snapd.apparmor
 sudo reboot
-```
-
-{% hint style="info" %}
-У _**Snap**_ имеется графическое приложение, в котором можно посмотреть все существующие пакеты и установить их. Называется _**Snap Store**_.
-{% endhint %}
-
-```shell
-sudo snap install snap-store 
 ```
 
 ## Команды
