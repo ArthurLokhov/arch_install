@@ -4,6 +4,8 @@ description: Операционная система внутри операци
 
 # Виртуализация
 
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
 ## VirtualBox
 
 Для виртуализации я буду использовать _**VirtualBox**_.

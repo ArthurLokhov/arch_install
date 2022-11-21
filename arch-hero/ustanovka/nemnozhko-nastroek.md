@@ -2,7 +2,7 @@
 description: Начинаем начинать... Продолжаем продолжать...
 ---
 
-# 5⃣ Немножко настроек
+# 5⃣ 5⃣ Немножко настроек
 
 ## Создание пользователя без привилегий
 
@@ -26,7 +26,7 @@ passwd <user_name>
 
 И самое важное: нужно открыть файл _**visudo**_ и расскоментировать следующую строчку:
 
-<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Нужная строчка</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Нужная строчка</p></figcaption></figure>
 
 Чтобы открыть файл _**visudo**_, введем данную команду.
 
