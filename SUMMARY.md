@@ -15,6 +15,7 @@
   * ["Шорткат" для терминала](arch-hero/polirovka-sistemy/shortkat-dlya-terminala.md)
   * [Бекап](arch-hero/polirovka-sistemy/bekap.md)
   * [Виртуализация](arch-hero/polirovka-sistemy/virtualizaciya.md)
+  * [Firewall](arch-hero/polirovka-sistemy/firewall.md)
   * [Создание папок пользователя](arch-hero/polirovka-sistemy/sozdanie-papok-polzovatelya.md)
   * [Установка шрифтов](arch-hero/polirovka-sistemy/ustanovka-shriftov.md)
 * [🖥 Оконные окружения](arch-hero/okonnye-okruzheniya/README.md)

@@ -26,4 +26,4 @@ paru -S timeshift
 
 Также мы можем заплонировать время для создания бекапов. Я предпочел оставить по умолчанию, так как бекапы делаю сам.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
