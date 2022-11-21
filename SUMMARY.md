@@ -35,6 +35,7 @@
   * [Discord](arch-hero/programmy/discord.md)
   * [Chrome](arch-hero/programmy/chrome.md)
   * [MPV](arch-hero/programmy/mpv.md)
+  * [Qimgv](arch-hero/programmy/qimgv.md)
   * [OBS Studio](arch-hero/programmy/obs-studio.md)
   * [Visual Studio Code](arch-hero/programmy/visual-studio-code.md)
 * [🔌 Драйвера](arch-hero/draivera/README.md)
