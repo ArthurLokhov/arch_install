@@ -40,6 +40,7 @@
   * [Visual Studio Code](arch-hero/programmy/visual-studio-code.md)
 * [🔌 Драйвера](arch-hero/draivera/README.md)
   * [SSD](arch-hero/draivera/ssd.md)
+  * [4K Монитор](arch-hero/draivera/4k-monitor.md)
   * [Bluetooth и звуковая карта](arch-hero/draivera/bluetooth-i-zvukovaya-karta.md)
   * [Клавиатура](arch-hero/draivera/klaviatura.md)
   * [TP-LINK: Wireless USB Adapter](arch-hero/draivera/tp-link-wireless-usb-adapter.md)
