@@ -29,6 +29,7 @@
 * [💻 Программы](arch-hero/programmy/README.md)
   * [Ark](arch-hero/programmy/ark.md)
   * [Flameshot](arch-hero/programmy/flameshot.md)
+  * [OnlyOffice](arch-hero/programmy/onlyoffice.md)
   * [Telegram](arch-hero/programmy/telegram.md)
   * [Discord](arch-hero/programmy/discord.md)
   * [Chrome](arch-hero/programmy/chrome.md)
