@@ -51,15 +51,8 @@ sudo mkdir /mnt/btrfs
 Смонтируем туда наши разделы, на которых установлена система(root и home)
 
 ```shell
-sudo mount /dev/nvme0n1p5 /mnt/btrfs/root
-sudo mount /dev/nvme0n1p6 /mnt/btrfs/home
-```
-
-Перенесем эти разделы.
-
-```shell
-sudo mv /mnt/btrfs/root /mnt/btrfs/@
-sudo mv /mnt/btrfs/home /mnt/btrfs/@home
+sudo mount /dev/nvme0n1p5 /mnt/btrfs/@
+sudo mount /dev/nvme0n1p6 /mnt/btrfs/@home
 ```
 
 Затем правим FSTAB.
@@ -75,7 +68,7 @@ sudo vim /etc/fstab
 Обновляем grub
 
 ```shell
-sudo grub-mkconfig -o /boot/grub2/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 sync
 sudo umount -r /mnt/btrfs
 sudo reboot
