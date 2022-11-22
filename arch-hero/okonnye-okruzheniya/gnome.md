@@ -2,7 +2,7 @@
 description: Подходит для тех, кто не хочет заморачиваться с настройками
 ---
 
-# 2⃣ Gnome
+# Gnome
 
 {% hint style="success" %}
 Gnome является идеальным решением для новичков. У него из коробки есть все, что вам нужно и он не требует множества настроек.&#x20;
@@ -34,4 +34,11 @@ sudo systemctl enable gdm.service
 
 ```shell
 sudo reboot
+```
+
+Чтобы удалить _**Gnome**_.
+
+```shell
+sudo systemctl disable gdm.service
+paru -Rs gnome gnome-extra gdm gnome-tweaks
 ```
