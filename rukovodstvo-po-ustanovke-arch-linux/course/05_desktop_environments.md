@@ -42,10 +42,3 @@ sudo systemctl enable sddm
 ```shell
 sudo reboot
 ```
-
-Чтобы удалить _**KDE**_.
-
-```shell
-sudo systemctl disable sddm
-paru -Rs plasma sddm dolphin
-```

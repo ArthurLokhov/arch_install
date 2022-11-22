@@ -29,3 +29,5 @@ mount /dev/nvme0n1p7 /mnt/home/games
 swapon /dev/nvme0n1p8
 mkdir /mnt/efi
 ```
+
+После создания пользователя, перенесьте _/mnt/home/games_ в _/mnt/home/\<user>/games_. Также изменитье _/etc/fstab_ соответственно.
