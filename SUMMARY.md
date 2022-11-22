@@ -12,7 +12,7 @@
   * [Немножко настроек](arch-hero/ustanovka/nemnozhko-nastroek.md)
   * [Загрузчик Grub](arch-hero/ustanovka/zagruzchik-grub.md)
 * [⚙ Полировка системы](arch-hero/polirovka-sistemy.md)
-  * ["Шорткат" для терминала](arch-hero/polirovka-sistemy/shortkat-dlya-terminala.md)
+  * ["Шорткаты"](arch-hero/polirovka-sistemy/shortkat-dlya-terminala.md)
   * [BTRFS](arch-hero/polirovka-sistemy/btrfs.md)
   * [Бекап](arch-hero/polirovka-sistemy/bekap.md)
   * [Виртуализация](arch-hero/polirovka-sistemy/virtualizaciya.md)
